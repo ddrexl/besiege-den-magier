@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Enemies/black.png" type="Texture" id=1]
+[ext_resource path="res://Enemies/Lifebar.gd" type="Script" id=2]
+[ext_resource path="res://Enemies/red.png" type="Texture" id=3]
+
+[node name="Lifebar" type="TextureProgress"]
+margin_left = -8.0
+margin_top = -27.0
+margin_right = 8.0
+margin_bottom = -25.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 3 )
+nine_patch_stretch = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

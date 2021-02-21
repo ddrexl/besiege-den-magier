@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Enemies/SpiderAttackController.gd" type="Script" id=1]
+
+[node name="SpiderAttackController" type="Node2D"]
+script = ExtResource( 1 )
+attack_distance = 48
+
+[node name="WebShootingTimer" type="Timer" parent="."]
+
+[node name="SpiderWebs" type="Node" parent="."]
+[connection signal="timeout" from="WebShootingTimer" to="." method="_on_WebShootingTimer_timeout"]

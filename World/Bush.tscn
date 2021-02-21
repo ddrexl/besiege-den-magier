@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://World/Bush.png" type="Texture" id=1]
+[ext_resource path="res://Combat/FireHurtBox.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 6.0
+height = 10.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 8.0
+
+[node name="Bush" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -8 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+rotation = -1.5708
+shape = SubResource( 1 )
+
+[node name="FireHurtBox" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, -4 )
+
+[node name="CollisionShape2D" parent="FireHurtBox" index="0"]
+shape = SubResource( 2 )
+
+[node name="FireHurtBox2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1, -14 )
+
+[node name="CollisionShape2D" parent="FireHurtBox2" index="0"]
+shape = SubResource( 2 )
+
+[node name="FireHurtBox3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -8, -5 )
+
+[node name="CollisionShape2D" parent="FireHurtBox3" index="0"]
+shape = SubResource( 2 )
+
+[editable path="FireHurtBox"]
+
+[editable path="FireHurtBox2"]
+
+[editable path="FireHurtBox3"]

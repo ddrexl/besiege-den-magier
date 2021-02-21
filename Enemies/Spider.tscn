@@ -1,0 +1,244 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://World/objects.png" type="Texture" id=1]
+[ext_resource path="res://Enemies/Spider.gd" type="Script" id=2]
+[ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemies/Lifebar.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemies/SpiderAttackController.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Combat/FireHurtBox.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Effects/ItemDrop.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Combat/Hurtbox.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Combat/Hitbox.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Enemies/WanderController.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Enemies/SoftCollision.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Enemies/Health.tscn" type="PackedScene" id=14]
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/Spider Sprite Sheet.png-c26acab74d427cfe6fafefbfef69e483.stex"
+
+[sub_resource type="Animation" id=2]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 36, 37, 38, 39, 36 ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 45, 46, 47, 45 ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.9
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 18, 19, 20, 21, 22, 23, 24, 25, 26 ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11, 12, 13, 14 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 57, 58, 59, 60, 61, 62 ]
+}
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 8.06226
+
+[sub_resource type="CircleShape2D" id=9]
+radius = 4.12311
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 64.0
+
+[sub_resource type="CircleShape2D" id=12]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id=13]
+radius = 6.08276
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Spider" type="KinematicBody2D"]
+collision_layer = 16
+script = ExtResource( 2 )
+
+[node name="Health" parent="." instance=ExtResource( 14 )]
+max_health = 2
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = SubResource( 1 )
+offset = Vector2( 0, -16 )
+vframes = 16
+hframes = 9
+frame = 36
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/attack = SubResource( 2 )
+anims/damage = SubResource( 3 )
+anims/idle = SubResource( 4 )
+anims/jump = SubResource( 5 )
+anims/move = SubResource( 6 )
+anims/on_back = SubResource( 7 )
+
+[node name="WorldCollision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, -4 )
+shape = SubResource( 8 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 11 )]
+visible = false
+position = Vector2( 0, -4 )
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+shape = SubResource( 9 )
+
+[node name="Hurtbox" parent="." instance=ExtResource( 10 )]
+visible = false
+position = Vector2( 0, -4 )
+collision_layer = 8
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+shape = SubResource( 10 )
+
+[node name="PlayerDetectionZone" parent="." instance=ExtResource( 3 )]
+visible = false
+position = Vector2( 0, -4 )
+
+[node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
+modulate = Color( 1, 1, 1, 0.392157 )
+shape = SubResource( 11 )
+
+[node name="SoftCollision" parent="." instance=ExtResource( 13 )]
+visible = false
+position = Vector2( 0, -4 )
+
+[node name="CollisionShape2D" parent="SoftCollision" index="0"]
+shape = SubResource( 12 )
+
+[node name="FireHurtBox" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( 0, -4 )
+
+[node name="CollisionShape2D" parent="FireHurtBox" index="0"]
+shape = SubResource( 13 )
+
+[node name="WanderController" parent="." instance=ExtResource( 12 )]
+
+[node name="SpiderAttackController" parent="." instance=ExtResource( 5 )]
+
+[node name="WanderIdleStateTransitionTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="Lifebar" parent="." instance=ExtResource( 4 )]
+margin_top = -16.0
+margin_bottom = -14.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 14 )
+
+[node name="ChaseMarker" type="Sprite" parent="."]
+visible = false
+z_index = 100
+texture = ExtResource( 1 )
+vframes = 18
+hframes = 36
+frame = 120
+
+[node name="ItemDrop" parent="." instance=ExtResource( 7 )]
+[connection signal="health_changed" from="Health" to="Lifebar" method="_on_Stats_health_changed"]
+[connection signal="max_health_changed" from="Health" to="Lifebar" method="_on_Stats_max_health_changed"]
+[connection signal="no_health" from="Health" to="." method="_on_Stats_no_health"]
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+[connection signal="player_in_sight" from="PlayerDetectionZone" to="." method="_on_PlayerDetectionZone_player_in_sight"]
+[connection signal="player_out_of_sight" from="PlayerDetectionZone" to="." method="_on_PlayerDetectionZone_player_out_of_sight"]
+[connection signal="deal_fire_damage" from="FireHurtBox" to="." method="_on_FireHurtBox_deal_fire_damage"]
+[connection signal="fire_ended" from="FireHurtBox" to="." method="_on_FireHurtBox_fire_ended"]
+[connection signal="timeout" from="WanderIdleStateTransitionTimer" to="." method="_on_WanderIdleStateTransitionTimer_timeout"]
+
+[editable path="Hitbox"]
+
+[editable path="Hurtbox"]
+
+[editable path="PlayerDetectionZone"]
+
+[editable path="SoftCollision"]
+
+[editable path="FireHurtBox"]
