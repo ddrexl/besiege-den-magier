@@ -1,15 +1,7 @@
-szene wechseln mit beliebig vielen positionen -> string
-item drop
-    export chances
-        none 1-100
-        coin 0-100
-        life 0-100
-        chance = i / sum
 world
     permanent state
         coins
         other key items
-
     cast ring
     vase - shatter
     heart container
@@ -23,3 +15,13 @@ enemies
     magician sprite
 effects
     hit effect sound fuer feuer
+
+world layout + game script
+    home
+    garden
+    town
+    forest
+    cave
+    path
+    fointain
+    boss arena

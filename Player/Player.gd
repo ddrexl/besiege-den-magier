@@ -34,27 +34,8 @@ func _ready():
 
 func set_spawn_location():
 	var level = get_tree().current_scene
-	var location = Vector2.ZERO
-	match stats.spawn_location:
-		PlayerStats.SpawnLocation.NORTH:
-			location = level.NORTH
-		PlayerStats.SpawnLocation.SOUTH:
-			location = level.SOUTH
-		PlayerStats.SpawnLocation.EAST:
-			location = level.EAST
-		PlayerStats.SpawnLocation.WEST:
-			location = level.WEST
-		PlayerStats.SpawnLocation.A:
-			location = level.A
-		PlayerStats.SpawnLocation.B:
-			location = level.B
-		PlayerStats.SpawnLocation.C:
-			location = level.C
-		PlayerStats.SpawnLocation.D:
-			location = level.D
-	position = location
+	position = level.spawn_locations[stats.spawn_location]
 
-	
 func set_spawn_facing():
 	var direction = Vector2.DOWN
 	match stats.spawn_facing:

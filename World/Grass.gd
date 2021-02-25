@@ -3,6 +3,7 @@ extends Node2D
 const GrassEffect = preload("res://Effects/GrassEffect.tscn")
 const Heart = preload("res://World/Heart.tscn")
 onready var center = $Center
+onready var item_drop = $ItemDrop
 
 func create_grass_effect():
 	var grass_effect = GrassEffect.instance()
@@ -13,16 +14,9 @@ func create_grass_effect():
 
 func _on_Hurtbox_area_entered(_area):
 	create_grass_effect()
-	maybe_drop_heart()
+	item_drop.drop_item()
 	queue_free()
 
 func _on_FireHurtBox_fire_ended():
-	maybe_drop_heart()
+	item_drop.drop_item()
 	queue_free()
-
-func maybe_drop_heart():
-	var drop = randi() % 4 == 0
-	if drop:
-		var heart = Heart.instance()
-		heart.global_position = center.global_position
-		get_parent().add_child(heart)

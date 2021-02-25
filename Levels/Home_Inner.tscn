@@ -64,7 +64,7 @@ parameters/Idle/blend_position = Vector2( 0, -1 )
 [node name="GotoHome" parent="." instance=ExtResource( 2 )]
 position = Vector2( 144, 149 )
 level = "res://Levels/Home.tscn"
-player_location = 4
+player_location = "house"
 player_face_direction = 1
 
 [editable path="Player"]

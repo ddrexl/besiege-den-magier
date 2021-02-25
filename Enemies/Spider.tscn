@@ -223,6 +223,8 @@ hframes = 36
 frame = 120
 
 [node name="ItemDrop" parent="." instance=ExtResource( 7 )]
+chance_heart = 1
+chance_coin = 1
 [connection signal="health_changed" from="Health" to="Lifebar" method="_on_Stats_health_changed"]
 [connection signal="max_health_changed" from="Health" to="Lifebar" method="_on_Stats_max_health_changed"]
 [connection signal="no_health" from="Health" to="." method="_on_Stats_no_health"]

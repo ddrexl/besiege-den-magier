@@ -1,7 +1,9 @@
 extends Node2D
 
-const A = Vector2(280, 144)
-const WEST = Vector2(24, 304)
+const spawn_locations = {
+	"house" : Vector2(280, 144),
+	"west" : Vector2(24, 304),
+}
 
 #func _input(event):
 #	if event.is_action_pressed("ui_accept"):

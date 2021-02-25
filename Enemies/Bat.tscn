@@ -107,7 +107,7 @@ max_health = 2
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 1 )
 frames = SubResource( 7 )
-frame = 1
+frame = 4
 playing = true
 offset = Vector2( 0, -12 )
 
@@ -169,6 +169,8 @@ anims/start = SubResource( 14 )
 anims/stop = SubResource( 15 )
 
 [node name="ItemDrop" parent="." instance=ExtResource( 8 )]
+chance_heart = 1
+chance_coin = 1
 [connection signal="health_changed" from="Health" to="Lifebar" method="_on_Stats_health_changed"]
 [connection signal="max_health_changed" from="Health" to="Lifebar" method="_on_Stats_max_health_changed"]
 [connection signal="no_health" from="Health" to="." method="_on_Stats_no_health"]

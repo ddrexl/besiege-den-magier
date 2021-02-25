@@ -1,16 +1,5 @@
 extends Node
 
-enum SpawnLocation {
-	NORTH,
-	WEST,
-	EAST,
-	SOUTH,
-	A,
-	B,
-	C,
-	D
-}
-
 enum SpawnFacing {
 	UP,
 	DOWN,
@@ -21,7 +10,7 @@ enum SpawnFacing {
 export(int) var max_health = 1 setget set_max_health
 var health = max_health setget set_health
 var coins = 0 setget set_coins
-var spawn_location = SpawnLocation.A
+var spawn_location = "start"
 var spawn_facing = SpawnFacing.UP
 
 

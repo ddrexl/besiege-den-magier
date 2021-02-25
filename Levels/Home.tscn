@@ -65,19 +65,23 @@ remote_path = NodePath("../../../Camera2D")
 
 [node name="Coin" parent="YSort/Coins" instance=ExtResource( 14 )]
 position = Vector2( 584, 264 )
-frame = 5
+frame = 7
 
 [node name="Coin2" parent="YSort/Coins" instance=ExtResource( 14 )]
 position = Vector2( 568, 264 )
+frame = 6
 
 [node name="Coin3" parent="YSort/Coins" instance=ExtResource( 14 )]
 position = Vector2( 600, 264 )
+frame = 6
 
 [node name="Coin4" parent="YSort/Coins" instance=ExtResource( 14 )]
 position = Vector2( 584, 184 )
+frame = 6
 
 [node name="Coin5" parent="YSort/Coins" instance=ExtResource( 14 )]
 position = Vector2( 600, 184 )
+frame = 6
 
 [node name="Bushes" type="YSort" parent="YSort"]
 
@@ -175,7 +179,6 @@ max_health = 10
 
 [node name="AnimatedSprite" parent="YSort/Enemies/BatBoss" index="1"]
 material = SubResource( 1 )
-frame = 0
 
 [node name="Spider" parent="YSort/Enemies" instance=ExtResource( 8 )]
 position = Vector2( 152, 32 )
@@ -221,12 +224,12 @@ position = Vector2( 280, 112 )
 [node name="GotoHomeInner" parent="." instance=ExtResource( 13 )]
 position = Vector2( 280, 112 )
 level = "res://Levels/Home_Inner.tscn"
-player_location = 4
+player_location = "door"
 
 [node name="GotoTown" parent="." instance=ExtResource( 13 )]
 position = Vector2( 0, 304 )
 level = "res://Levels/Town.tscn"
-player_location = 2
+player_location = "east"
 player_face_direction = 2
 
 [editable path="Camera2D"]

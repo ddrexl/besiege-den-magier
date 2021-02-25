@@ -1,3 +1,6 @@
 extends Node2D
 
-const A = Vector2(144, 136)
+const spawn_locations = {
+	"start" : Vector2(200, 40),
+	"door" : Vector2(144, 136),
+}

@@ -1,7 +1,7 @@
 extends Area2D
 
 export(String, FILE, "*.tscn") var level
-export(PlayerStats.SpawnLocation) var player_location
+export(String) var player_location
 export(PlayerStats.SpawnFacing) var player_face_direction = PlayerStats.SpawnFacing.UP
 
 func _on_ChangeLevel_body_entered(_body):
