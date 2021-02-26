@@ -8,7 +8,7 @@ export (int) var chance_heart = 0 setget set_chance_heart
 export (int) var chance_coin = 0 setget set_chance_coin
 
 func set_chance_nothing(value):
-	chance_nothing = clamp(value, 1, 100)
+	chance_nothing = clamp(value, 0, 100)
 
 func set_chance_heart(value):
 	chance_heart = clamp(value, 0, 100)
@@ -17,19 +17,17 @@ func set_chance_coin(value):
 	chance_coin = clamp(value, 0, 100)
 
 func drop_item():
-	var sum = float(chance_nothing + chance_heart + chance_coin)
-	var rand = randf()
-	var a = chance_nothing / sum
-	var b = a + (chance_heart / sum)
-	var c = b + (chance_coin / sum)
+	var sum = chance_nothing + chance_heart + chance_coin
+	var rand = randi() % sum
+	var a = chance_nothing
+	var b = a + chance_heart
+	var c = b + chance_coin
 	
-	print("rand", rand)
-	
-	if rand <= a:
+	if rand < a:
 		drop_nothing()
-	elif rand <= b:
+	elif rand < b:
 		drop_heart()
-	elif rand <= c:
+	elif rand < c:
 		drop_coin()
 
 func drop_nothing():
