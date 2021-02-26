@@ -1,19 +1,22 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://World/Inner.tres" type="TileSet" id=1]
 [ext_resource path="res://ChangeLevel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Levels/Home_Inner.gd" type="Script" id=4]
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+[ext_resource path="res://World/Coin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World/PersistentObjects.tscn" type="PackedScene" id=6]
+[ext_resource path="res://UI/UI.tscn" type="PackedScene" id=8]
 
 [node name="Home_Inner" type="Node2D"]
 script = ExtResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 88, 64 )
+position = Vector2( 112, 56 )
 current = true
 zoom = Vector2( 0.8, 0.8 )
+
+[node name="UI" parent="." instance=ExtResource( 8 )]
 
 [node name="Floor" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -50,21 +53,30 @@ cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 format = 1
 tile_data = PoolIntArray( 3, 8, 393217, 4, 8, 196609, 5, 8, 262147, 196611, 8, 196613, 196612, 8, 262147, 262147, 8, 4, 262148, 8, 131073, 262149, 8, 6, 262156, 8, 327683, 327691, 8, 196613, 327692, 8, 327682 )
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( 144, 136 )
 
-[node name="MoveSprite" parent="Player" index="0"]
-frame = 27
+[node name="PersistentObjects" parent="YSort" instance=ExtResource( 6 )]
 
-[node name="AnimationTree" parent="Player" index="4"]
-active = true
-parameters/playback = SubResource( 1 )
-parameters/Idle/blend_position = Vector2( 0, -1 )
+[node name="Coin" parent="YSort/PersistentObjects" instance=ExtResource( 5 )]
+position = Vector2( -104, -32 )
+frame = 6
+
+[node name="Coin2" parent="YSort/PersistentObjects" instance=ExtResource( 5 )]
+position = Vector2( -40, -32 )
+frame = 6
+
+[node name="Coin3" parent="YSort/PersistentObjects" instance=ExtResource( 5 )]
+position = Vector2( -120, -16 )
+frame = 6
+
+[node name="Coin4" parent="YSort/PersistentObjects" instance=ExtResource( 5 )]
+position = Vector2( 56, 64 )
 
 [node name="GotoHome" parent="." instance=ExtResource( 2 )]
 position = Vector2( 144, 149 )
 level = "res://Levels/Home.tscn"
 player_location = "house"
 player_face_direction = 1
-
-[editable path="Player"]
