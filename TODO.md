@@ -1,18 +1,17 @@
 world
-    title screen
-    game over screen
-    dark cave with lights and occlusion
     permanent state
-        coins
-        key items
+        key items (emit "collected"!)
             sword
             fire ball
             fire wave
             heart container
-    casting ring
     pot (sword)
-    vines (fire)
     healing fountain
+    title screen
+    game over screen
+    dark cave with lights and occlusion
+    casting ring
+    vines (fire)
     old man
     stationary torch
     water effects
@@ -23,6 +22,8 @@ enemies
     magician
 effects
     hit effect sound for fire
+controls
+    buttons for tablet or browser?
 
 game script
     home
