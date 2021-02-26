@@ -34,7 +34,7 @@ func _ready():
 
 func set_spawn_location():
 	var level = get_tree().current_scene
-	position = level.spawn_locations[stats.spawn_location]
+	position = level.spawn_locations.get(stats.spawn_location, position)
 
 func set_spawn_facing():
 	var direction = Vector2.DOWN
