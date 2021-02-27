@@ -46,33 +46,35 @@ tile_data = PoolIntArray( -131072, 9, 3, -131071, 9, 131075, -131070, 9, 131075,
 
 [node name="Coin" parent="PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 280, -16 )
-frame = 7
+frame = 2
 
 [node name="Coin2" parent="PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 264, -16 )
-frame = 7
+frame = 2
 
 [node name="Coin3" parent="PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 280, 0 )
-frame = 6
+frame = 1
 
 [node name="Coin4" parent="PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 264, 0 )
-frame = 6
+frame = 1
 
 [node name="Coin5" parent="PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 248, 0 )
-frame = 5
+frame = 0
 
 [node name="Coin6" parent="PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 248, -16 )
-frame = 5
+frame = 0
 
 [node name="Coin7" parent="PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 232, -16 )
+frame = 7
 
 [node name="Coin8" parent="PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 232, 0 )
+frame = 7
 
 [node name="Houses" type="YSort" parent="."]
 
