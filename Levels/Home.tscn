@@ -5,14 +5,14 @@
 [ext_resource path="res://World/Map.tres" type="TileSet" id=3]
 [ext_resource path="res://World/Cliff.tres" type="TileSet" id=4]
 [ext_resource path="res://World/House.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Camera2D.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Game/Camera2D.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Enemies/Spider.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=9]
 [ext_resource path="res://UI/UI.tscn" type="PackedScene" id=10]
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=12]
-[ext_resource path="res://ChangeLevel.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Game/ChangeLevel.tscn" type="PackedScene" id=13]
 [ext_resource path="res://World/Coin.tscn" type="PackedScene" id=14]
 [ext_resource path="res://World/PersistentObjects.tscn" type="PackedScene" id=15]
 
@@ -66,27 +66,22 @@ remote_path = NodePath("../../../Camera2D")
 
 [node name="Coin" parent="YSort/PersistentObjects" instance=ExtResource( 14 )]
 position = Vector2( 440, 208 )
-frame = 1
+frame = 5
 
 [node name="Coin2" parent="YSort/PersistentObjects" instance=ExtResource( 14 )]
 position = Vector2( 424, 208 )
-frame = 0
 
 [node name="Coin3" parent="YSort/PersistentObjects" instance=ExtResource( 14 )]
 position = Vector2( 456, 208 )
-frame = 0
 
 [node name="Coin4" parent="YSort/PersistentObjects" instance=ExtResource( 14 )]
 position = Vector2( 440, 128 )
-frame = 0
 
 [node name="Coin5" parent="YSort/PersistentObjects" instance=ExtResource( 14 )]
 position = Vector2( 456, 128 )
-frame = 0
 
 [node name="Coin6" parent="YSort/PersistentObjects" instance=ExtResource( 14 )]
 position = Vector2( 152, 80 )
-frame = 0
 
 [node name="Bushes" type="YSort" parent="YSort"]
 
@@ -184,7 +179,7 @@ max_health = 10
 
 [node name="AnimatedSprite" parent="YSort/Enemies/BatBoss" index="1"]
 material = SubResource( 1 )
-frame = 1
+frame = 0
 
 [node name="Spider" parent="YSort/Enemies" instance=ExtResource( 8 )]
 position = Vector2( 152, 32 )
