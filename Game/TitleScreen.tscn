@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://UI/kenvector_future2_24.tres" type="DynamicFont" id=1]
 [ext_resource path="res://UI/CreditsButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/character.png" type="Texture" id=3]
 [ext_resource path="res://UI/StartButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://UI/kenvector_future2_11.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Effects/FadeIn.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Game/TitleScreen.gd" type="Script" id=7]
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -55,11 +58,13 @@ margin_bottom = 118.0
 
 [node name="StartButton" parent="Menu/CenterRow/VBoxContainer/Options" instance=ExtResource( 4 )]
 margin_right = 188.0
+scene_to_load = "res://Levels/Home_Inner.tscn"
 
 [node name="CreditsButton" parent="Menu/CenterRow/VBoxContainer/Options" instance=ExtResource( 2 )]
 margin_top = 44.0
 margin_right = 188.0
 margin_bottom = 84.0
+scene_to_load = "res://Game/Credits.tscn"
 
 [node name="Spacing2" type="VBoxContainer" parent="Menu/CenterRow/VBoxContainer"]
 margin_top = 122.0
@@ -93,3 +98,6 @@ margin_bottom = 230.0
 size_flags_vertical = 1
 custom_fonts/font = ExtResource( 5 )
 text = "Version 0.3 - Justus' Papa"
+
+[node name="FadeIn" parent="." instance=ExtResource( 6 )]
+visible = false
