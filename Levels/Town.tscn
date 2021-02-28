@@ -6,7 +6,7 @@
 [ext_resource path="res://UI/UI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World/Coin.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World/House.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Game/ChangeLevel.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Game/ChangeLevelPoint.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Levels/Town.gd" type="Script" id=8]
 [ext_resource path="res://World/PersistentObjects.tscn" type="PackedScene" id=9]
 
@@ -46,33 +46,35 @@ tile_data = PoolIntArray( -131072, 9, 3, -131071, 9, 131075, -131070, 9, 131075,
 
 [node name="Coin" parent="PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 280, -16 )
-frame = 5
+frame = 3
 
 [node name="Coin2" parent="PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 264, -16 )
-frame = 5
+frame = 3
 
 [node name="Coin3" parent="PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 280, 0 )
+frame = 2
 
 [node name="Coin4" parent="PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 264, 0 )
+frame = 2
 
 [node name="Coin5" parent="PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 248, 0 )
-frame = 3
+frame = 1
 
 [node name="Coin6" parent="PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 248, -16 )
-frame = 3
+frame = 1
 
 [node name="Coin7" parent="PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 232, -16 )
-frame = 2
+frame = 0
 
 [node name="Coin8" parent="PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 232, 0 )
-frame = 2
+frame = 0
 
 [node name="Houses" type="YSort" parent="."]
 
@@ -89,7 +91,7 @@ position = Vector2( 72, 64 )
 position = Vector2( 416, 176 )
 
 [node name="GotoHome" parent="." instance=ExtResource( 7 )]
-position = Vector2( 480, 128 )
+position = Vector2( 472, 128 )
 level = "res://Levels/Home.tscn"
 player_location = "west"
 player_face_direction = 3

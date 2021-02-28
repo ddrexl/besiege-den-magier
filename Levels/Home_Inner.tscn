@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://World/Inner.tres" type="TileSet" id=1]
-[ext_resource path="res://Game/ChangeLevel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Game/ChangeLevelPoint.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Levels/Home_Inner.gd" type="Script" id=4]
 [ext_resource path="res://World/Coin.tscn" type="PackedScene" id=5]
@@ -56,27 +56,28 @@ tile_data = PoolIntArray( 3, 8, 393217, 4, 8, 196609, 5, 8, 262147, 196611, 8, 1
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 144, 136 )
+position = Vector2( 144, 128 )
 
 [node name="PersistentObjects" parent="YSort" instance=ExtResource( 6 )]
 
 [node name="Coin" parent="YSort/PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( -104, -32 )
-frame = 6
+frame = 7
 
 [node name="Coin2" parent="YSort/PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( -40, -32 )
-frame = 6
+frame = 7
 
 [node name="Coin3" parent="YSort/PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( -120, -16 )
-frame = 6
+frame = 7
 
 [node name="Coin4" parent="YSort/PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 56, 64 )
+frame = 5
 
-[node name="GotoHome" parent="." instance=ExtResource( 2 )]
-position = Vector2( 144, 149 )
+[node name="ChangeLevelPoint" parent="." instance=ExtResource( 2 )]
+position = Vector2( 144, 144 )
 level = "res://Levels/Home.tscn"
 player_location = "house"
 player_face_direction = 1

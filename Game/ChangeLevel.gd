@@ -1,16 +1,17 @@
-extends Area2D
+extends Node
 
 export(String, FILE, "*.tscn") var level
-export(String) var player_location
-export(PlayerStats.SpawnFacing) var player_face_direction = PlayerStats.SpawnFacing.UP
+export (float) var fade_in_duration = 0.5 setget set_fade_in_duration
 
 onready var fade_in = $CanvasLayer/Screen/FadeIn
+onready var screen = $CanvasLayer/Screen
 
-func _on_ChangeLevel_body_entered(_body):
-	PlayerStats.spawn_location = player_location
-	PlayerStats.spawn_facing = player_face_direction
-	fade_in.show()
-	fade_in.fade_in(1.5) # default is 0.5s, we make it 50% faster
+func change_level():
+	screen.show()
+	fade_in.fade_in(fade_in_duration)
 
 func _on_FadeIn_fade_finished():
 	get_tree().change_scene(level)
+
+func set_fade_in_duration(value):
+	fade_in_duration = clamp(value, 0.1, 10.0)

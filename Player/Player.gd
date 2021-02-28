@@ -25,7 +25,7 @@ onready var sword = $Sword
 onready var fire_magic = $FireMagic
 
 func _ready():
-	stats.connect("no_health", self, "queue_free")
+	stats.connect("no_health", self, "game_over")
 	animation_tree.active = true
 	fire_magic.parent_node = get_parent()
 	blink_animation.play("stop")
@@ -123,3 +123,6 @@ func _on_WebbedBox_glued_started():
 func _on_WebbedBox_glued_ended():
 	blink_animation.play("stop")
 	state = MOVE
+
+func game_over():
+	$ChangeLevel.change_level()

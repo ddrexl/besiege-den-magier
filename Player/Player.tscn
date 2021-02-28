@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/character.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://WhiteColor.shader" type="Shader" id=8]
 [ext_resource path="res://Player/WebbedBox.gd" type="Script" id=9]
 [ext_resource path="res://Player/Sword.gd" type="Script" id=10]
+[ext_resource path="res://Game/ChangeLevel.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 8 )
@@ -793,6 +794,10 @@ shape = SubResource( 39 )
 [node name="BlinkAnimationPlayer" type="AnimationPlayer" parent="."]
 anims/start = SubResource( 40 )
 anims/stop = SubResource( 41 )
+
+[node name="ChangeLevel" parent="." instance=ExtResource( 11 )]
+level = "res://Game/GameOverScreen.tscn"
+fade_in_duration = 2.0
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="invincibility_ended" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_ended"]
 [connection signal="invincibility_started" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_started"]

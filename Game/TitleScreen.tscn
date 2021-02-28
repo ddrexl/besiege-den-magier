@@ -5,8 +5,8 @@
 [ext_resource path="res://Player/character.png" type="Texture" id=3]
 [ext_resource path="res://UI/StartButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://UI/kenvector_future2_11.tres" type="DynamicFont" id=5]
-[ext_resource path="res://Effects/FadeIn.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Game/TitleScreen.gd" type="Script" id=7]
+[ext_resource path="res://Game/ChangeLevel.tscn" type="PackedScene" id=8]
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
@@ -81,10 +81,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Characters" type="TextureRect" parent="Menu/CenterRow/CenterContainer"]
-margin_left = 43.0
-margin_top = 25.0
-margin_right = 143.0
-margin_bottom = 125.0
+margin_left = 44.0
+margin_top = 26.0
+margin_right = 144.0
+margin_bottom = 126.0
 rect_min_size = Vector2( 100, 100 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -99,6 +99,4 @@ size_flags_vertical = 1
 custom_fonts/font = ExtResource( 5 )
 text = "Version 0.3 - Justus' Papa"
 
-[node name="FadeIn" parent="." instance=ExtResource( 6 )]
-visible = false
-[connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
+[node name="ChangeLevel" parent="." instance=ExtResource( 8 )]
