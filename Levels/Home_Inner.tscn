@@ -62,19 +62,19 @@ position = Vector2( 144, 128 )
 
 [node name="Coin" parent="YSort/PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( -104, -32 )
-frame = 7
+frame = 1
 
 [node name="Coin2" parent="YSort/PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( -40, -32 )
-frame = 7
+frame = 1
 
 [node name="Coin3" parent="YSort/PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( -120, -16 )
-frame = 7
+frame = 1
 
 [node name="Coin4" parent="YSort/PersistentObjects" instance=ExtResource( 5 )]
 position = Vector2( 56, 64 )
-frame = 5
+frame = 7
 
 [node name="ChangeLevelPoint" parent="." instance=ExtResource( 2 )]
 position = Vector2( 144, 144 )

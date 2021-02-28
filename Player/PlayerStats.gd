@@ -5,9 +5,11 @@ enum SpawnFacing {
 	DOWN,
 	LEFT,
 	RIGHT
-} 
+}
 
-export(int) var max_health = 1 setget set_max_health
+const initial_max_health = 3
+
+export(int) var max_health = initial_max_health setget set_max_health
 var health = max_health setget set_health
 var coins = 0 setget set_coins
 var spawn_location = "start"
@@ -38,3 +40,9 @@ func _ready():
 	self.health = max_health
 	self.max_health = max_health
 
+func reset():
+	self.max_health = initial_max_health
+	self.health = initial_max_health
+	self.coins = 0
+	self.spawn_location = "start"
+	self.spawn_facing = SpawnFacing.DOWN

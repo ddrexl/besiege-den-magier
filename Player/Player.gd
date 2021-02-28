@@ -23,6 +23,7 @@ onready var webbed_box = $WebbedBox
 onready var blink_animation = $BlinkAnimationPlayer
 onready var sword = $Sword
 onready var fire_magic = $FireMagic
+onready var game_over_screen = $GotoGameOverScreen
 
 func _ready():
 	stats.connect("no_health", self, "game_over")
@@ -123,6 +124,9 @@ func _on_WebbedBox_glued_started():
 func _on_WebbedBox_glued_ended():
 	blink_animation.play("stop")
 	state = MOVE
-
+	
 func game_over():
-	$ChangeLevel.change_level()
+	self.remove_child(game_over_screen)
+	get_parent().add_child(game_over_screen)
+	game_over_screen.change_level()
+	queue_free()

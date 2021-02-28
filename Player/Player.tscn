@@ -795,7 +795,7 @@ shape = SubResource( 39 )
 anims/start = SubResource( 40 )
 anims/stop = SubResource( 41 )
 
-[node name="ChangeLevel" parent="." instance=ExtResource( 11 )]
+[node name="GotoGameOverScreen" parent="." instance=ExtResource( 11 )]
 level = "res://Game/GameOverScreen.tscn"
 fade_in_duration = 2.0
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
