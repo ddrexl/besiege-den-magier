@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Game/ChangeLevel.gd" type="Script" id=1]
+[ext_resource path="res://Effects/FadeIn.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
@@ -12,4 +13,17 @@ script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Screen" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FadeIn" parent="CanvasLayer/Screen" instance=ExtResource( 2 )]
+visible = false
 [connection signal="body_entered" from="." to="." method="_on_ChangeLevel_body_entered"]
+[connection signal="fade_finished" from="CanvasLayer/Screen/FadeIn" to="." method="_on_FadeIn_fade_finished"]

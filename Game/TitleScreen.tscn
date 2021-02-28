@@ -51,16 +51,16 @@ margin_bottom = 30.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Options" type="VBoxContainer" parent="Menu/CenterRow/VBoxContainer"]
+[node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow/VBoxContainer"]
 margin_top = 34.0
 margin_right = 188.0
 margin_bottom = 118.0
 
-[node name="StartButton" parent="Menu/CenterRow/VBoxContainer/Options" instance=ExtResource( 4 )]
+[node name="StartButton" parent="Menu/CenterRow/VBoxContainer/Buttons" instance=ExtResource( 4 )]
 margin_right = 188.0
 scene_to_load = "res://Levels/Home_Inner.tscn"
 
-[node name="CreditsButton" parent="Menu/CenterRow/VBoxContainer/Options" instance=ExtResource( 2 )]
+[node name="CreditsButton" parent="Menu/CenterRow/VBoxContainer/Buttons" instance=ExtResource( 2 )]
 margin_top = 44.0
 margin_right = 188.0
 margin_bottom = 84.0
@@ -101,3 +101,4 @@ text = "Version 0.3 - Justus' Papa"
 
 [node name="FadeIn" parent="." instance=ExtResource( 6 )]
 visible = false
+[connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]

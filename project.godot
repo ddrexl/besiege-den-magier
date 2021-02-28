@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Besiege den Magier"
-run/main_scene="res://Levels/Home_Inner.tscn"
+run/main_scene="res://Game/TitleScreen.tscn"
 run/low_processor_mode=true
 config/icon="res://icon.png"
 

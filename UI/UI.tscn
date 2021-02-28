@@ -10,7 +10,7 @@
 
 [node name="UI" type="CanvasLayer"]
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="DisplayStats" type="GridContainer" parent="."]
 margin_right = 64.0
 margin_bottom = 13.0
 size_flags_horizontal = 0
@@ -19,18 +19,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HealthUI" parent="GridContainer" instance=ExtResource( 2 )]
+[node name="HealthUI" parent="DisplayStats" instance=ExtResource( 2 )]
 margin_right = 0.0
 margin_bottom = 9.0
 size_flags_vertical = 3
 
-[node name="CoinUI" parent="GridContainer" instance=ExtResource( 3 )]
+[node name="CoinUI" parent="DisplayStats" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 13.0
 margin_bottom = 13.0
 
-[node name="GridContainer2" type="HBoxContainer" parent="."]
+[node name="CombatControls" type="HBoxContainer" parent="."]
+visible = false
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -41,13 +42,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CombatControls"]
 margin_right = 58.0
 margin_bottom = 54.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="FireBallButton" type="Button" parent="GridContainer2/HBoxContainer"]
+[node name="FireBallButton" type="Button" parent="CombatControls/HBoxContainer"]
 margin_right = 27.0
 margin_bottom = 54.0
 size_flags_horizontal = 3
@@ -58,7 +59,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="GridContainer2/HBoxContainer/FireBallButton"]
+[node name="CenterContainer" type="CenterContainer" parent="CombatControls/HBoxContainer/FireBallButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -69,12 +70,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="GridContainer2/HBoxContainer/FireBallButton/CenterContainer"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="CombatControls/HBoxContainer/FireBallButton/CenterContainer"]
 frames = ExtResource( 6 )
-frame = 3
+frame = 2
 playing = true
 
-[node name="FireWaveButton" type="Button" parent="GridContainer2/HBoxContainer"]
+[node name="FireWaveButton" type="Button" parent="CombatControls/HBoxContainer"]
 margin_left = 31.0
 margin_right = 58.0
 margin_bottom = 54.0
@@ -86,7 +87,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="GridContainer2/HBoxContainer/FireWaveButton"]
+[node name="CenterContainer" type="CenterContainer" parent="CombatControls/HBoxContainer/FireWaveButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -97,12 +98,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="GridContainer2/HBoxContainer/FireWaveButton/CenterContainer"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="CombatControls/HBoxContainer/FireWaveButton/CenterContainer"]
 frames = ExtResource( 6 )
-frame = 3
+frame = 2
 playing = true
 
-[node name="SwordButton" type="TextureButton" parent="GridContainer2"]
+[node name="SwordButton" type="TextureButton" parent="CombatControls"]
 margin_left = 62.0
 margin_right = 120.0
 margin_bottom = 54.0
