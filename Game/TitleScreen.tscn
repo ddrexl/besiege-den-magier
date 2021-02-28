@@ -58,7 +58,7 @@ margin_bottom = 118.0
 
 [node name="StartButton" parent="Menu/CenterRow/VBoxContainer/Buttons" instance=ExtResource( 4 )]
 margin_right = 188.0
-scene_to_load = "res://Levels/Home_Inner.tscn"
+scene_to_load = "res://Levels/Home.tscn"
 
 [node name="CreditsButton" parent="Menu/CenterRow/VBoxContainer/Buttons" instance=ExtResource( 2 )]
 margin_top = 44.0

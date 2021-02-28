@@ -1,20 +1,11 @@
 extends Node
 
-enum SpawnFacing {
-	UP,
-	DOWN,
-	LEFT,
-	RIGHT
-}
-
 const initial_max_health = 3
 
 export(int) var max_health = initial_max_health setget set_max_health
 var health = max_health setget set_health
 var coins = 0 setget set_coins
-var spawn_location = "start"
-var spawn_facing = SpawnFacing.DOWN
-
+var spawn_location = ""
 
 signal no_health
 signal health_changed(value)
@@ -44,5 +35,4 @@ func reset():
 	self.max_health = initial_max_health
 	self.health = initial_max_health
 	self.coins = 0
-	self.spawn_location = "start"
-	self.spawn_facing = SpawnFacing.DOWN
+	self.spawn_location = ""

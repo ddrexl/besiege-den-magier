@@ -7,8 +7,6 @@ world
             heart container
     pot (sword)
     healing fountain
-    title screen
-    game over screen
     dark cave with lights and occlusion
     casting ring
     vines (fire)

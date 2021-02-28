@@ -30,25 +30,7 @@ func _ready():
 	animation_tree.active = true
 	fire_magic.parent_node = get_parent()
 	blink_animation.play("stop")
-	set_spawn_location()
-	set_spawn_facing()
 
-func set_spawn_location():
-	var level = get_tree().current_scene
-	position = level.spawn_locations.get(stats.spawn_location, position)
-
-func set_spawn_facing():
-	var direction = Vector2.DOWN
-	match stats.spawn_facing:
-		PlayerStats.SpawnFacing.UP:
-			direction = Vector2.UP
-		PlayerStats.SpawnFacing.DOWN:
-			direction = Vector2.DOWN
-		PlayerStats.SpawnFacing.LEFT:
-			direction = Vector2.LEFT
-		PlayerStats.SpawnFacing.RIGHT:
-			direction = Vector2.RIGHT
-	face_in_direction(direction)
 
 func _physics_process(delta):
 	match state:
