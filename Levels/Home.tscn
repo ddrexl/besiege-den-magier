@@ -64,18 +64,19 @@ tile_data = PoolIntArray( 196612, 8, 393217, 196613, 8, 196609, 196614, 8, 26214
 [node name="PersistentObjects" parent="." index="10" instance=ExtResource( 8 )]
 
 [node name="Coin" parent="PersistentObjects" index="0" instance=ExtResource( 6 )]
-position = Vector2( -88, 16 )
-frame = 6
+position = Vector2( 56, 72 )
+frame = 7
 
 [node name="Coin2" parent="PersistentObjects" index="1" instance=ExtResource( 6 )]
-position = Vector2( -24, 16 )
-frame = 6
+position = Vector2( 120, 64 )
+frame = 7
 
 [node name="Coin3" parent="PersistentObjects" index="2" instance=ExtResource( 6 )]
-position = Vector2( -104, 32 )
-frame = 6
+position = Vector2( 40, 88 )
+frame = 7
 
 [node name="Coin4" parent="PersistentObjects" index="3" instance=ExtResource( 6 )]
-position = Vector2( 72, 128 )
+position = Vector2( 216, 184 )
+frame = 5
 
 [editable path="Camera2D"]
