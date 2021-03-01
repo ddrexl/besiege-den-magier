@@ -1,7 +1,6 @@
 extends Node2D
 
 const GrassEffect = preload("res://Effects/GrassEffect.tscn")
-const Heart = preload("res://World/Heart.tscn")
 onready var center = $Center
 onready var item_drop = $ItemDrop
 

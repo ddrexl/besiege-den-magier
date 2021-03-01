@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Combat/Hurtbox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/objects.png" type="Texture" id=2]
+[ext_resource path="res://Effects/ItemDrop.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Pot.gd" type="Script" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 7.0
+
+[node name="Pot" type="StaticBody2D"]
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 64, 96, 32, 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Hurtbox" parent="." instance=ExtResource( 1 )]
+collision_layer = 8
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+shape = SubResource( 2 )
+
+[node name="ItemDrop" parent="." instance=ExtResource( 3 )]
+chance_nothing = 2
+chance_heart = 1
+chance_coin = 1
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+
+[editable path="Hurtbox"]

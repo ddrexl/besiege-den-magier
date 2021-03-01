@@ -5,7 +5,6 @@ world
             fire ball
             fire wave
             heart container
-    pot (sword)
     healing fountain
     dark cave with lights and occlusion
     casting ring
@@ -21,55 +20,60 @@ enemies
 effects
     hit effect sound for fire
 controls
-    buttons for tablet or browser?
+    enable buttons for tablet or browser only
+    touch movement
 
 game script
-    home
-        start
-    garden
-        find sword
-        lern to cut grass
-        destroy pots to enter town
-        vines cover hidden fire wave
-    town
-        hidden coins and heart container behind house
-        people to talk to?
-            old man
-        healing fountain
-        vines cover shortcut to fire cave
-    path
-        first encounter with magician
-        fight summoned spider
-        can't beat with sword
-        fight ends by event
-            old man tells that spider only die by fire
-            old man tells that fire is in cave
-            old man ignites spider
-            spider drops heart container
-    cave
-        bat enemies
-        bat boss
-            drops heart container
-            opens path to magic cave
-    fire cave
-        fire ball magic
-        vines cover shortcut to town
-    forest
-        spider enemies
-        spider boss
-            drops heart container
-    dark cave
-        bat enemies
-        labyrinth
-        fire lightens path
-        fire lights torches
-    magic fountain
-        full heal
-    boss arena
-        magician boss fight
-        spawns spiders
-        casts fire magic
+    - [✓] home
+        - [✓] start
+        - [✓] lern to collect coins
+    - [o] garden
+        - [ ] find sword
+        - [✓] lern to cut grass
+        - [✓] destroy pots to enter town
+        - [ ] vines cover hidden fire wave
+    - [.] town
+        - [o] hidden garden behind house
+            - [✓] coins
+            - [ ] heart container
+        - [ ] people to talk to?
+            - [ ] old man
+        - [ ] healing fountain
+        - [ ] vines cover shortcut to fire cave
+    - [ ] path
+        - [ ] first encounter with magician
+        - [ ] fight summoned spider
+        - [ ] can't beat with sword
+        - [ ] fight ends by event
+            - [ ] old man tells that spider only die by fire
+            - [ ] old man tells that fire is in cave
+            - [ ] old man ignites spider
+            - [ ] spider drops heart container
+    - [ ] cave
+        - [ ] bat enemies
+        - [ ] bat boss
+            - [ ] drops heart container
+            - [ ] opens path to magic cave
+    - [ ] fire cave
+        - [ ] fire ball magic
+        - [ ] vines cover shortcut to town
+    - [ ] forest
+        - [ ] spider enemies
+        - [ ] spider boss
+            - [ ] drops heart container
+    - [ ] dark cave
+        - [ ] bat enemies
+        - [ ] labyrinth
+        - [ ] fire lightens path
+        - [ ] fire lights torches
+    - [ ] magic fountain
+        - [ ] full heal
+    - [ ] boss arena
+        - [ ] magician boss fight
+        - [ ] spawns spiders
+        - [ ] casts fire magic
 
+layout:
          boss arena
            |
          magic fountian
