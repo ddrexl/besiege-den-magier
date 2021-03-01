@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Dark Rooms and Scary Things - isaiah658.ogg-5facf70b8d169552d8f807b08b3540d5.oggstr"
+
+[deps]
+
+source_file="res://Audio/Dark Rooms and Scary Things - isaiah658.ogg"
+dest_files=[ "res://.import/Dark Rooms and Scary Things - isaiah658.ogg-5facf70b8d169552d8f807b08b3540d5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
