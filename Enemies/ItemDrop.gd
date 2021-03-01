@@ -36,9 +36,9 @@ func drop_nothing():
 func drop_heart():
 	var heart = Heart.instance()
 	heart.global_position = global_position
-	get_parent().get_parent().add_child(heart) # ysort
+	get_parent().get_parent().call_deferred("add_child", heart) # ysort
 
 func drop_coin():
 	var coin = Coin.instance()
 	coin.global_position = global_position
-	get_parent().get_parent().add_child(coin) # ysort
+	get_parent().get_parent().call_deferred("add_child", coin) # ysort
