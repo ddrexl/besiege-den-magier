@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Effects/BurnEffect.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Effects/BurningFlame.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Effects/Fireball.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -13,11 +13,8 @@ radius = 4.0
 collision_layer = 2147483648
 script = ExtResource( 2 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -5 )
-frames = ExtResource( 1 )
-frame = 6
-playing = true
+[node name="BurningFlame" parent="." instance=ExtResource( 1 )]
+frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

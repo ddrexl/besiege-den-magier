@@ -7,12 +7,14 @@ var health = max_health setget set_health
 var coins = 0 setget set_coins
 var spawn_location = ""
 var has_sword = false setget set_has_sword
+var has_fire_ball_magic = false setget set_has_fire_ball_magic
 
 signal no_health
 signal health_changed(value)
 signal max_health_changed(value)
 signal coins_changed(value)
 signal sword_obtained
+signal fire_ball_magic_obtained
 
 func set_health(value):
 	health = min(value, max_health)
@@ -33,6 +35,11 @@ func set_has_sword(value):
 	has_sword = value
 	if has_sword:
 		emit_signal("sword_obtained")
+		
+func set_has_fire_ball_magic(value):
+	has_fire_ball_magic = value
+	if has_fire_ball_magic:
+		emit_signal("fire_ball_magic_obtained")
 
 func _ready():
 	self.health = max_health
@@ -44,3 +51,4 @@ func reset():
 	self.coins = 0
 	self.spawn_location = ""
 	self.has_sword = false
+	self.has_fire_ball_magic = false

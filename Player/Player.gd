@@ -57,13 +57,13 @@ func move_state(delta):
 		
 	move()
 	
-	if stats.has_sword and Input.is_action_just_pressed("attack"):
+	if Input.is_action_just_pressed("attack") and stats.has_sword:
 		state = ATTACK
 	
 	if Input.is_action_just_pressed("fire_wave"):
 		fire_magic.cast_fire_wave()
 	
-	if Input.is_action_just_pressed("fire_ball"):
+	if Input.is_action_just_pressed("fire_ball") and stats.has_fire_ball_magic:
 		fire_magic.cast_fire_ball()
 
 func move():

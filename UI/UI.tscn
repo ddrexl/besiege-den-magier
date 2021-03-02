@@ -72,7 +72,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="CombatControls/HBoxContainer/FireBallButton/CenterContainer"]
 frames = ExtResource( 6 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="FireWaveButton" type="Button" parent="CombatControls/HBoxContainer"]
@@ -101,7 +101,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="CombatControls/HBoxContainer/FireWaveButton/CenterContainer"]
 frames = ExtResource( 6 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="SwordButton" type="TextureButton" parent="CombatControls"]

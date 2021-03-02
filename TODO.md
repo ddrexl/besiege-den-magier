@@ -1,7 +1,6 @@
 world
     permanent state
         key items (emit "collected"!)
-            fire ball
             fire wave
             heart container
     healing fountain
@@ -26,10 +25,11 @@ game script
     - [✓] home
         - [✓] start
         - [✓] lern to collect coins
-    - [O] garden
+    - [o] garden
         - [✓] find sword
         - [✓] lern to cut grass
         - [✓] destroy pots to enter town
+        - [ ] remove fire ball magic
         - [ ] vines cover hidden fire wave
     - [.] town
         - [o] hidden garden behind house
