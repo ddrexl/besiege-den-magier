@@ -72,6 +72,7 @@ __meta__ = {
 }
 
 [node name="BurningFlame" parent="CombatControls/HBoxContainer/FireBallButton/CenterContainer" instance=ExtResource( 8 )]
+frame = 2
 
 [node name="FireWaveButton" type="Button" parent="CombatControls/HBoxContainer"]
 visible = false

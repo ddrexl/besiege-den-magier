@@ -3,9 +3,13 @@ extends AnimatedSprite
 var stats = PlayerStats
 var heart_sound = preload("res://Audio/Heart.wav")
 
+signal collected(Node2D)
+
 func _on_Area2D_body_entered(_body):
-	stats.health += 1
+	stats.max_health += 1
+	stats.health = stats.max_health
 	play_heart_sound()
+	emit_signal("collected", self)
 	queue_free()
 
 func play_heart_sound():

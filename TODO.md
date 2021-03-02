@@ -1,11 +1,7 @@
 world
-    permanent state
-        key items (emit "collected"!)
-            heart container
+    vines (fire)
     healing fountain
     dark cave with lights and occlusion
-    casting ring
-    vines (fire)
     old man
     stationary torch
     water effects
@@ -16,11 +12,14 @@ enemies
     magician
 effects
     hit effect sound for fire
+    key item pickup sound
+    secret uncovered sound
 controls
     enable buttons for tablet or browser only
     touch movement
 combat
     magic cooldown
+    casting ring?
 
 game script
     - [✓] home
@@ -31,6 +30,8 @@ game script
         - [✓] lern to cut grass
         - [✓] destroy pots to enter town
         - [ ] remove fire ball magic
+        - [ ] remove fire wave magic
+        - [ ] remove heart container
         - [ ] vines cover hidden fire wave
     - [.] town
         - [o] hidden garden behind house
