@@ -37,7 +37,7 @@ func _physics_process(delta):
 		MOVE:
 			move_state(delta)
 		ATTACK:
-			attack_state()		
+			attack_state()
 
 func move_state(delta):
 	var input_vector = Vector2.ZERO
@@ -56,22 +56,24 @@ func move_state(delta):
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 		
 	move()
+	combat()
 	
-	if Input.is_action_just_pressed("attack") and stats.has_sword:
-		state = ATTACK
-	
-	if Input.is_action_just_pressed("fire_wave"):
-		fire_magic.cast_fire_wave()
-	
-	if Input.is_action_just_pressed("fire_ball") and stats.has_fire_ball_magic:
-		fire_magic.cast_fire_ball()
-
 func move():
 	if webbed_box.is_glued_by_spider_webs():
 		velocity = Vector2.ZERO
 	else:
 		velocity = move_and_slide(velocity)
-		
+
+func combat():
+	if Input.is_action_just_pressed("attack") and stats.has_sword:
+		state = ATTACK
+	
+	if Input.is_action_just_pressed("fire_ball") and stats.has_fire_ball_magic:
+		fire_magic.cast_fire_ball()
+	
+	if Input.is_action_just_pressed("fire_wave") and stats.has_fire_wave_magic:
+		fire_magic.cast_fire_wave()
+
 func face_in_direction(direction):
 	animation_tree.set("parameters/Idle/blend_position", direction)
 	animation_tree.set("parameters/Run/blend_position", direction)

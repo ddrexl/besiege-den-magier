@@ -1,7 +1,6 @@
 world
     permanent state
         key items (emit "collected"!)
-            fire wave
             heart container
     healing fountain
     dark cave with lights and occlusion
@@ -20,6 +19,8 @@ effects
 controls
     enable buttons for tablet or browser only
     touch movement
+combat
+    magic cooldown
 
 game script
     - [✓] home
