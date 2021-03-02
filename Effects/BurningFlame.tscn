@@ -3,7 +3,5 @@
 [ext_resource path="res://Effects/BurnEffect.tres" type="SpriteFrames" id=1]
 
 [node name="BurningFlame" type="AnimatedSprite"]
-position = Vector2( 0, -5 )
 frames = ExtResource( 1 )
-frame = 6
 playing = true

@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://UI/FireBallButton.gd" type="Script" id=1]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/CoinUI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://UI/SwordButton.gd" type="Script" id=4]
 [ext_resource path="res://UI/Sword.png" type="Texture" id=5]
-[ext_resource path="res://Effects/BurnEffect.tres" type="SpriteFrames" id=6]
+[ext_resource path="res://Effects/CastingRing.tscn" type="PackedScene" id=6]
 [ext_resource path="res://UI/FireBallButton2.gd" type="Script" id=7]
+[ext_resource path="res://Effects/BurningFlame.tscn" type="PackedScene" id=8]
 
 [node name="UI" type="CanvasLayer"]
 
@@ -49,7 +50,7 @@ size_flags_vertical = 3
 
 [node name="FireBallButton" type="Button" parent="CombatControls/HBoxContainer"]
 visible = false
-margin_right = 27.0
+margin_right = 58.0
 margin_bottom = 54.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -70,15 +71,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="CombatControls/HBoxContainer/FireBallButton/CenterContainer"]
-frames = ExtResource( 6 )
-frame = 2
-playing = true
+[node name="BurningFlame" parent="CombatControls/HBoxContainer/FireBallButton/CenterContainer" instance=ExtResource( 8 )]
+frame = 1
 
 [node name="FireWaveButton" type="Button" parent="CombatControls/HBoxContainer"]
 visible = false
-margin_left = 31.0
-margin_right = 58.0
+margin_right = 120.0
 margin_bottom = 54.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -99,10 +97,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="CombatControls/HBoxContainer/FireWaveButton/CenterContainer"]
-frames = ExtResource( 6 )
-frame = 2
-playing = true
+[node name="CastingRing" parent="CombatControls/HBoxContainer/FireWaveButton/CenterContainer" instance=ExtResource( 6 )]
 
 [node name="SwordButton" type="TextureButton" parent="CombatControls"]
 visible = false
@@ -115,3 +110,5 @@ texture_normal = ExtResource( 5 )
 expand = true
 stretch_mode = 5
 script = ExtResource( 4 )
+
+[editable path="CombatControls/HBoxContainer/FireWaveButton/CenterContainer/CastingRing"]
