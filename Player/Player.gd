@@ -65,6 +65,11 @@ func move():
 		velocity = move_and_slide(velocity)
 
 func combat():
+	if Input.is_action_just_pressed("ui_accept"):
+		stats.has_sword = true
+		stats.has_fire_ball_magic = true
+		stats.has_fire_wave_magic = true
+		
 	if Input.is_action_just_pressed("attack") and stats.has_sword:
 		state = ATTACK
 	

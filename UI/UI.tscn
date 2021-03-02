@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://UI/FireBallButton.gd" type="Script" id=1]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Effects/CastingRing.tscn" type="PackedScene" id=6]
 [ext_resource path="res://UI/FireWaveButton.gd" type="Script" id=7]
 [ext_resource path="res://Effects/BurningFlame.tscn" type="PackedScene" id=8]
+[ext_resource path="res://UI/CombatControls.gd" type="Script" id=9]
 
 [node name="UI" type="CanvasLayer"]
 
@@ -32,12 +33,14 @@ margin_top = 13.0
 margin_bottom = 13.0
 
 [node name="CombatControls" type="HBoxContainer" parent="."]
+visible = false
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -120.0
 margin_top = -54.0
+script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -72,7 +75,6 @@ __meta__ = {
 }
 
 [node name="BurningFlame" parent="CombatControls/HBoxContainer/FireBallButton/CenterContainer" instance=ExtResource( 8 )]
-frame = 2
 
 [node name="FireWaveButton" type="Button" parent="CombatControls/HBoxContainer"]
 visible = false

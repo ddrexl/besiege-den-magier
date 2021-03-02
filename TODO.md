@@ -20,6 +20,8 @@ controls
 combat
     magic cooldown
     casting ring?
+debug
+    remove ui_accept to give player all abilities
 
 game script
     - [✓] home
