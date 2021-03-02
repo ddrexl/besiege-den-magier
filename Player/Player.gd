@@ -57,7 +57,7 @@ func move_state(delta):
 		
 	move()
 	
-	if Input.is_action_just_pressed("attack"):
+	if stats.has_sword and Input.is_action_just_pressed("attack"):
 		state = ATTACK
 	
 	if Input.is_action_just_pressed("fire_wave"):

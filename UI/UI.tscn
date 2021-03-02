@@ -31,7 +31,6 @@ margin_top = 13.0
 margin_bottom = 13.0
 
 [node name="CombatControls" type="HBoxContainer" parent="."]
-visible = false
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -43,12 +42,13 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CombatControls"]
-margin_right = 58.0
+margin_right = 120.0
 margin_bottom = 54.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="FireBallButton" type="Button" parent="CombatControls/HBoxContainer"]
+visible = false
 margin_right = 27.0
 margin_bottom = 54.0
 size_flags_horizontal = 3
@@ -72,10 +72,11 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="CombatControls/HBoxContainer/FireBallButton/CenterContainer"]
 frames = ExtResource( 6 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="FireWaveButton" type="Button" parent="CombatControls/HBoxContainer"]
+visible = false
 margin_left = 31.0
 margin_right = 58.0
 margin_bottom = 54.0
@@ -100,10 +101,11 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="CombatControls/HBoxContainer/FireWaveButton/CenterContainer"]
 frames = ExtResource( 6 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="SwordButton" type="TextureButton" parent="CombatControls"]
+visible = false
 margin_left = 62.0
 margin_right = 120.0
 margin_bottom = 54.0

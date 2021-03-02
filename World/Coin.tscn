@@ -3,25 +3,25 @@
 [ext_resource path="res://World/objects.png" type="Texture" id=1]
 [ext_resource path="res://World/Coin.gd" type="Script" id=2]
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
 region = Rect2( 0, 64, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
 region = Rect2( 16, 64, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 1 )
 region = Rect2( 32, 64, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 1 )
 region = Rect2( 48, 64, 16, 16 )
 
-[sub_resource type="SpriteFrames" id=11]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 7 ), SubResource( 7 ), SubResource( 7 ), SubResource( 7 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 1 ), SubResource( 1 ), SubResource( 1 ), SubResource( 1 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -31,8 +31,7 @@ animations = [ {
 radius = 6.0
 
 [node name="Coin" type="AnimatedSprite"]
-frames = SubResource( 11 )
-frame = 4
+frames = SubResource( 5 )
 playing = true
 script = ExtResource( 2 )
 
