@@ -31,12 +31,12 @@ game script
         - [✓] destroy pots to enter town
         - [ ] remove fire ball magic
         - [ ] remove fire wave magic
-        - [ ] remove heart container
+        - [✓] remove heart container
         - [ ] vines cover hidden fire wave
     - [.] town
-        - [o] hidden garden behind house
+        - [✓] hidden garden behind house
             - [✓] coins
-            - [ ] heart container
+            - [✓] heart container
         - [ ] people to talk to?
             - [ ] old man
         - [ ] healing fountain
