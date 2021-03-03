@@ -1,6 +1,6 @@
-extends YSort
+extends Node2D
 
-onready var player = $Player
+onready var player = $Entities/Player
 onready var spawn_location_node = $SpawnLocations
 var spawn_locations = {}
 
