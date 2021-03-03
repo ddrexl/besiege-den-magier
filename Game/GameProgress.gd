@@ -1,7 +1,7 @@
 extends Node
 
 var collected_items = []
-var show_combat_controls = true
+var touch_controls = true
 
 func reset():
 	collected_items = []
