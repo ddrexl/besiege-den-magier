@@ -2,7 +2,7 @@
 
 [ext_resource path="res://UI/kenvector_future2_24.tres" type="DynamicFont" id=1]
 [ext_resource path="res://UI/CreditsButton.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Player/character.png" type="Texture" id=3]
+[ext_resource path="res://icon2.png" type="Texture" id=3]
 [ext_resource path="res://UI/StartButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://UI/kenvector_future2_11.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Game/TitleScreen.gd" type="Script" id=7]
