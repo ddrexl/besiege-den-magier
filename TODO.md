@@ -22,17 +22,19 @@ combat
     casting ring?
 debug
     remove ui_accept to give player all abilities
+tileset
+    https://opengameart.org/content/lpc-16x16-tiles-extended
 
 game script
     - [✓] home
         - [✓] start
         - [✓] lern to collect coins
-    - [o] garden
+    - [O] garden
         - [✓] find sword
         - [✓] lern to cut grass
         - [✓] destroy pots to enter town
-        - [ ] remove fire ball magic
-        - [ ] remove fire wave magic
+        - [✓] remove fire ball magic
+        - [✓] remove fire wave magic
         - [✓] remove heart container
         - [ ] vines cover hidden fire wave
     - [.] town
