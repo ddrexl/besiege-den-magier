@@ -1,5 +1,4 @@
 world
-    vines (fire)
     healing fountain
     dark cave with lights and occlusion
     old man
@@ -29,14 +28,14 @@ game script
     - [✓] home
         - [✓] start
         - [✓] lern to collect coins
-    - [O] garden
+    - [✓] garden
         - [✓] find sword
         - [✓] lern to cut grass
         - [✓] destroy pots to enter town
         - [✓] remove fire ball magic
         - [✓] remove fire wave magic
         - [✓] remove heart container
-        - [ ] vines cover hidden fire wave
+        - [✓] vines cover hidden fire wave
     - [.] town
         - [✓] hidden garden behind house
             - [✓] coins
