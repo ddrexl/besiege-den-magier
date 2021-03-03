@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://UI/FireBallButton.gd" type="Script" id=1]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=2]
@@ -9,8 +9,13 @@
 [ext_resource path="res://UI/FireWaveButton.gd" type="Script" id=7]
 [ext_resource path="res://Effects/BurningFlame.tscn" type="PackedScene" id=8]
 [ext_resource path="res://UI/CombatControls.gd" type="Script" id=9]
+[ext_resource path="res://UI/Left.gd" type="Script" id=10]
 
 [node name="UI" type="CanvasLayer"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 240.0 ],
+"_edit_vertical_guides_": [ 40.0 ]
+}
 
 [node name="DisplayStats" type="GridContainer" parent="."]
 margin_right = 64.0
@@ -33,7 +38,6 @@ margin_top = 13.0
 margin_bottom = 13.0
 
 [node name="CombatControls" type="HBoxContainer" parent="."]
-visible = false
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -46,14 +50,13 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CombatControls"]
-margin_right = 120.0
+margin_right = 58.0
 margin_bottom = 54.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="FireBallButton" type="Button" parent="CombatControls/HBoxContainer"]
-visible = false
-margin_right = 58.0
+margin_right = 27.0
 margin_bottom = 54.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -75,10 +78,11 @@ __meta__ = {
 }
 
 [node name="BurningFlame" parent="CombatControls/HBoxContainer/FireBallButton/CenterContainer" instance=ExtResource( 8 )]
+frame = 1
 
 [node name="FireWaveButton" type="Button" parent="CombatControls/HBoxContainer"]
-visible = false
-margin_right = 120.0
+margin_left = 31.0
+margin_right = 58.0
 margin_bottom = 54.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -102,7 +106,6 @@ __meta__ = {
 [node name="CastingRing" parent="CombatControls/HBoxContainer/FireWaveButton/CenterContainer" instance=ExtResource( 6 )]
 
 [node name="SwordButton" type="TextureButton" parent="CombatControls"]
-visible = false
 margin_left = 62.0
 margin_right = 120.0
 margin_bottom = 54.0
@@ -112,5 +115,47 @@ texture_normal = ExtResource( 5 )
 expand = true
 stretch_mode = 5
 script = ExtResource( 4 )
+
+[node name="MoveControls" type="GridContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -46.0
+margin_right = 64.0
+margin_bottom = 18.0
+rect_rotation = -45.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left" type="Button" parent="MoveControls"]
+margin_right = 30.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+action_mode = 0
+script = ExtResource( 10 )
+
+[node name="Up" type="Button" parent="MoveControls"]
+margin_left = 34.0
+margin_right = 64.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Down" type="Button" parent="MoveControls"]
+margin_top = 34.0
+margin_right = 30.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Right" type="Button" parent="MoveControls"]
+margin_left = 34.0
+margin_top = 34.0
+margin_right = 64.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [editable path="CombatControls/HBoxContainer/FireWaveButton/CenterContainer/CastingRing"]

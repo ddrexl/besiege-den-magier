@@ -15,7 +15,6 @@ effects
     secret uncovered sound
 controls
     enable buttons for tablet or browser only
-    touch movement
 combat
     magic cooldown
     casting ring?
