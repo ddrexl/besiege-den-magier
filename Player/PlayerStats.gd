@@ -6,9 +6,9 @@ export(int) var max_health = initial_max_health setget set_max_health
 var health = max_health setget set_health
 var coins = 0 setget set_coins
 var spawn_location = ""
-var has_sword = false setget set_has_sword
-var has_fire_ball_magic = false setget set_has_fire_ball_magic
-var has_fire_wave_magic = false setget set_has_fire_wave_magic
+var has_sword = true setget set_has_sword
+var has_fire_ball_magic = true setget set_has_fire_ball_magic
+var has_fire_wave_magic = true setget set_has_fire_wave_magic
 
 signal no_health
 signal health_changed(value)
