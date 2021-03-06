@@ -1,8 +1,10 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://World/FireBallMagic.gd" type="Script" id=1]
 [ext_resource path="res://noisetexture.tres" type="Texture" id=2]
 [ext_resource path="res://Effects/BurningFlame.tscn" type="PackedScene" id=3]
+[ext_resource path="res://icon2.png" type="Texture" id=4]
+[ext_resource path="res://Effects/GodRays.tres" type="Material" id=5]
 
 [sub_resource type="VisualShaderNodeColorConstant" id=1]
 constant = Color( 0.675781, 0.0910339, 0.0910339, 1 )
@@ -227,21 +229,34 @@ radius = 8.0
 
 [node name="FireBallMagic" type="Node2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -128.0 ]
+}
 
 [node name="OuterRing" type="MeshInstance2D" parent="."]
+visible = false
 material = SubResource( 3 )
 mesh = SubResource( 4 )
 
 [node name="InnerGlow" type="MeshInstance2D" parent="."]
+visible = false
 material = SubResource( 22 )
 mesh = SubResource( 23 )
 
 [node name="BurningFlame" parent="." instance=ExtResource( 3 )]
+frame = 6
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 24 )
+
+[node name="LargeRays" type="Sprite" parent="."]
+material = ExtResource( 5 )
+position = Vector2( 0, -57 )
+scale = Vector2( 0.71, 0.71 )
+texture = ExtResource( 4 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
