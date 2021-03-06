@@ -1,9 +1,11 @@
 world
     healing fountain
+    cave tileset
+    forrest/tree
     dark cave with lights and occlusion
     old man
     stationary torch
-    water effects
+    water effects + lily
     ne props
     (tower)
     (waving flag)
