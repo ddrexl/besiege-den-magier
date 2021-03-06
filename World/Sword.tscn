@@ -1,8 +1,10 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://noisetexture.tres" type="Texture" id=1]
 [ext_resource path="res://UI/Sword.png" type="Texture" id=2]
 [ext_resource path="res://World/Sword.gd" type="Script" id=3]
+[ext_resource path="res://Effects/GodRays.tres" type="Material" id=4]
+[ext_resource path="res://icon2.png" type="Texture" id=5]
 
 [sub_resource type="VisualShaderNodeColorConstant" id=1]
 constant = Color( 0.675781, 0.0910339, 0.0910339, 1 )
@@ -222,8 +224,9 @@ shader = SubResource( 21 )
 radius = 8.0
 height = 16.0
 
-[sub_resource type="CircleShape2D" id=24]
-radius = 8.0
+[sub_resource type="CapsuleShape2D" id=26]
+radius = 4.0
+height = 10.0
 
 [sub_resource type="Animation" id=25]
 resource_name = "rotate"
@@ -244,12 +247,17 @@ tracks/0/keys = {
 
 [node name="Sword" type="Node2D"]
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -80.0 ]
+}
 
 [node name="OuterRing" type="MeshInstance2D" parent="."]
+visible = false
 material = SubResource( 3 )
 mesh = SubResource( 4 )
 
 [node name="InnerGlow" type="MeshInstance2D" parent="."]
+visible = false
 material = SubResource( 22 )
 mesh = SubResource( 23 )
 
@@ -262,9 +270,21 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 24 )
+shape = SubResource( 26 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "rotate"
 anims/rotate = SubResource( 25 )
+
+[node name="LargeRays" type="Sprite" parent="."]
+visible = false
+material = ExtResource( 4 )
+position = Vector2( 0, -65 )
+texture = ExtResource( 5 )
+
+[node name="SmallRays" type="Sprite" parent="."]
+material = ExtResource( 4 )
+position = Vector2( 0, -33 )
+scale = Vector2( 0.475, 0.475 )
+texture = ExtResource( 5 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
