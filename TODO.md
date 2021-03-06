@@ -5,7 +5,6 @@ world
     dark cave with lights and occlusion
     old man
     stationary torch
-    water effects + lily
     ne props
     (tower)
     (waving flag)
