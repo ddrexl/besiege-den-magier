@@ -1,9 +1,8 @@
 world
     healing fountain
     forrest/tree
-    dark cave with lights and occlusion
     old man
-    stationary torch
+    inflamable torch
     ne props
     (tower)
     (waving flag)
@@ -19,6 +18,7 @@ controls
 combat
     magic cooldown
     casting ring?
+    burn effect has same strengh as fire in dark cave
 debug
     remove ui_accept to give player all abilities
 tileset
@@ -65,10 +65,10 @@ game script
         - [ ] spider enemies
         - [ ] spider boss
             - [ ] drops heart container
-    - [ ] dark cave
+    - [.] dark cave
         - [ ] bat enemies
         - [ ] labyrinth
-        - [ ] fire lightens path
+        - [✓] fire lightens path
         - [ ] fire lights torches
     - [ ] magic fountain
         - [ ] full heal
