@@ -1,6 +1,5 @@
 world
     healing fountain
-    cave tileset
     forrest/tree
     dark cave with lights and occlusion
     old man
@@ -14,6 +13,7 @@ effects
     hit effect sound for fire
     key item pickup sound
     secret uncovered sound
+    water sounds for fountain
 controls
     enable buttons for tablet or browser only
 combat
@@ -36,14 +36,14 @@ game script
         - [✓] remove fire wave magic
         - [✓] remove heart container
         - [✓] vines cover hidden fire wave
-    - [.] town
+    - [o] town
         - [✓] hidden garden behind house
             - [✓] coins
             - [✓] heart container
         - [ ] people to talk to?
             - [ ] old man
         - [ ] healing fountain
-        - [ ] vines cover shortcut to fire cave
+        - [✓] vines cover shortcut to fire cave
     - [ ] path
         - [ ] first encounter with magician
         - [ ] fight summoned spider
@@ -58,9 +58,9 @@ game script
         - [ ] bat boss
             - [ ] drops heart container
             - [ ] opens path to magic cave
-    - [ ] fire cave
-        - [ ] fire ball magic
-        - [ ] vines cover shortcut to town
+    - [✓] fire cave
+        - [✓] fire ball magic
+        - [✓] vines cover shortcut to town
     - [ ] forest
         - [ ] spider enemies
         - [ ] spider boss
