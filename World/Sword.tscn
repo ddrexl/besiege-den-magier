@@ -47,12 +47,6 @@ shape = SubResource( 1 )
 autoplay = "rotate"
 anims/rotate = SubResource( 2 )
 
-[node name="LargeRays" type="Sprite" parent="."]
-visible = false
-material = ExtResource( 4 )
-position = Vector2( 0, -65 )
-texture = ExtResource( 5 )
-
 [node name="SmallRays" type="Sprite" parent="."]
 material = ExtResource( 4 )
 position = Vector2( 0, -33 )

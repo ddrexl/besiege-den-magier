@@ -1,5 +1,4 @@
 world
-    healing fountain
     forrest/tree
     old man
     inflamable torch
@@ -13,7 +12,6 @@ effects
     key item pickup sound
     secret uncovered sound
     water sounds for fountain
-    healing sound
 controls
     enable buttons for tablet or browser only
 people
@@ -40,13 +38,13 @@ tileset
         - [✓] remove fire wave magic
         - [✓] remove heart container
         - [✓] vines cover hidden fire wave
-    - [o] town
+    - [O] town
         - [✓] hidden garden behind house
             - [✓] coins
             - [✓] heart container
         - [ ] people to talk to?
             - [ ] old man
-        - [ ] healing fountain
+        - [✓] healing fountain
         - [✓] vines cover shortcut to fire cave
     - [ ] path
         - [ ] first encounter with magician

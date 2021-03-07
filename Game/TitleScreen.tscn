@@ -97,6 +97,6 @@ margin_right = 380.0
 margin_bottom = 230.0
 size_flags_vertical = 1
 custom_fonts/font = ExtResource( 5 )
-text = "Version 0.3 - Justus' Papa"
+text = "Version 0.4 - Justus' Papa"
 
 [node name="ChangeLevel" parent="." instance=ExtResource( 8 )]

@@ -110,6 +110,7 @@ void fragment()
 }"
 
 [resource]
+resource_local_to_scene = true
 shader = SubResource( 1 )
 shader_param/angle = -0.1
 shader_param/position = -0.1
