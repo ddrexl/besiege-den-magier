@@ -30,8 +30,7 @@ collision_layer = 8
 shape = SubResource( 2 )
 
 [node name="ItemDrop" parent="." instance=ExtResource( 3 )]
-chance_nothing = 2
-chance_heart = 1
+chance_nothing = 3
 chance_coin = 1
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
