@@ -13,10 +13,3 @@ region_rect = Rect2( 0, 80, 16, 32 )
 [node name="Fireball" parent="." instance=ExtResource( 2 )]
 SPEED = 0
 lifetime = 0
-
-[node name="BurningFlame" parent="Fireball/LuminousFlame" index="0"]
-frame = 2
-
-[editable path="Fireball"]
-
-[editable path="Fireball/LuminousFlame"]

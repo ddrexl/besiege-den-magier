@@ -1,5 +1,7 @@
 extends Node2D
 
+class_name Level
+
 onready var player = $Entities/Player
 onready var spawn_location_node = $SpawnLocations
 var spawn_locations = {}
