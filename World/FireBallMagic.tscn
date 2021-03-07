@@ -1,230 +1,11 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://World/FireBallMagic.gd" type="Script" id=1]
-[ext_resource path="res://noisetexture.tres" type="Texture" id=2]
 [ext_resource path="res://Effects/BurningFlame.tscn" type="PackedScene" id=3]
 [ext_resource path="res://icon2.png" type="Texture" id=4]
 [ext_resource path="res://Effects/GodRays.tres" type="Material" id=5]
 
-[sub_resource type="VisualShaderNodeColorConstant" id=1]
-constant = Color( 0.675781, 0.0910339, 0.0910339, 1 )
-
-[sub_resource type="VisualShader" id=2]
-code = "shader_type canvas_item;
-
-
-
-void vertex() {
-// Output:0
-
-}
-
-void fragment() {
-// Color:2
-	vec3 n_out2p0 = vec3(0.675781, 0.091034, 0.091034);
-	float n_out2p1 = 1.000000;
-
-// Output:0
-	COLOR.rgb = n_out2p0;
-
-}
-
-void light() {
-// Output:0
-
-}
-"
-graph_offset = Vector2( -72, 32 )
-mode = 1
-flags/light_only = false
-nodes/fragment/2/node = SubResource( 1 )
-nodes/fragment/2/position = Vector2( 220, 160 )
-nodes/fragment/connections = PoolIntArray( 2, 0, 0, 0 )
-
-[sub_resource type="ShaderMaterial" id=3]
-shader = SubResource( 2 )
-
-[sub_resource type="SphereMesh" id=4]
-radius = 9.0
-height = 18.0
-
-[sub_resource type="VisualShaderNodeScalarOp" id=5]
-default_input_values = [ 0, 0.0, 1, 0.2 ]
-operator = 2
-
-[sub_resource type="VisualShaderNodeScalarOp" id=6]
-default_input_values = [ 0, 1.0, 1, 0.1 ]
-operator = 1
-
-[sub_resource type="VisualShaderNodeVectorOp" id=7]
-operator = 2
-
-[sub_resource type="VisualShaderNodeColorConstant" id=8]
-constant = Color( 0.867188, 0.554294, 0.11152, 1 )
-
-[sub_resource type="VisualShaderNodeVectorOp" id=9]
-operator = 2
-
-[sub_resource type="VisualShaderNodeVectorOp" id=10]
-output_port_for_preview = 0
-
-[sub_resource type="VisualShaderNodeScalarOp" id=11]
-default_input_values = [ 0, 0.0, 1, 0.8 ]
-operator = 2
-
-[sub_resource type="VisualShaderNodeScalarFunc" id=12]
-function = 16
-
-[sub_resource type="VisualShaderNodeInput" id=13]
-input_name = "uv"
-
-[sub_resource type="VisualShaderNodeScalarOp" id=14]
-default_input_values = [ 0, 0.0, 1, 0.5 ]
-operator = 1
-
-[sub_resource type="VisualShaderNodeTexture" id=15]
-texture = ExtResource( 2 )
-
-[sub_resource type="VisualShaderNodeColorConstant" id=16]
-constant = Color( 0.851562, 0.0964661, 0.0964661, 1 )
-
-[sub_resource type="VisualShaderNodeInput" id=17]
-input_name = "time"
-
-[sub_resource type="VisualShaderNodeScalarFunc" id=18]
-function = 0
-
-[sub_resource type="VisualShaderNodeVectorOp" id=19]
-
-[sub_resource type="VisualShaderNodeScalarOp" id=20]
-default_input_values = [ 0, 0.0, 1, 2.0 ]
-operator = 2
-
-[sub_resource type="VisualShader" id=21]
-code = "shader_type canvas_item;
-uniform sampler2D tex_frg_3;
-
-
-
-void vertex() {
-// Output:0
-
-}
-
-void fragment() {
-// Input:2
-	vec3 n_out2p0 = vec3(UV, 0.0);
-
-// Texture:3
-	vec4 tex_frg_3_read = texture(tex_frg_3, n_out2p0.xy);
-	vec3 n_out3p0 = tex_frg_3_read.rgb;
-	float n_out3p1 = tex_frg_3_read.a;
-
-// Input:5
-	float n_out5p0 = TIME;
-
-// ScalarOp:8
-	float n_in8p1 = 2.00000;
-	float n_out8p0 = n_out5p0 * n_in8p1;
-
-// ScalarFunc:6
-	float n_out6p0 = sin(n_out8p0);
-
-// ScalarOp:12
-	float n_in12p1 = 0.20000;
-	float n_out12p0 = n_out6p0 * n_in12p1;
-
-// ScalarOp:20
-	float n_in20p1 = 0.50000;
-	float n_out20p0 = n_out12p0 - n_in20p1;
-
-// VectorOp:7
-	vec3 n_out7p0 = n_out3p0 + vec3(n_out20p0);
-
-// ScalarFunc:19
-	float n_out19p0 = ceil(dot(n_out7p0, vec3(0.333333, 0.333333, 0.333333)));
-
-// ScalarOp:18
-	float n_in18p1 = 0.80000;
-	float n_out18p0 = n_out19p0 * n_in18p1;
-
-// Color:4
-	vec3 n_out4p0 = vec3(0.851562, 0.096466, 0.096466);
-	float n_out4p1 = 1.000000;
-
-// VectorOp:14
-	vec3 n_out14p0 = vec3(n_out18p0) * n_out4p0;
-
-// ScalarOp:13
-	float n_in13p0 = 1.00000;
-	float n_out13p0 = n_in13p0 - n_out18p0;
-
-// Color:15
-	vec3 n_out15p0 = vec3(0.867188, 0.554294, 0.111520);
-	float n_out15p1 = 1.000000;
-
-// VectorOp:16
-	vec3 n_out16p0 = vec3(n_out13p0) * n_out15p0;
-
-// VectorOp:17
-	vec3 n_out17p0 = n_out14p0 + n_out16p0;
-
-// Output:0
-	COLOR.rgb = n_out17p0;
-
-}
-
-void light() {
-// Output:0
-
-}
-"
-graph_offset = Vector2( 982.514, 231 )
-mode = 1
-flags/light_only = false
-nodes/fragment/0/position = Vector2( 1940, 200 )
-nodes/fragment/2/node = SubResource( 13 )
-nodes/fragment/2/position = Vector2( -20, 100 )
-nodes/fragment/3/node = SubResource( 15 )
-nodes/fragment/3/position = Vector2( 160, 60 )
-nodes/fragment/4/node = SubResource( 16 )
-nodes/fragment/4/position = Vector2( 1220, 240 )
-nodes/fragment/5/node = SubResource( 17 )
-nodes/fragment/5/position = Vector2( -600, 280 )
-nodes/fragment/6/node = SubResource( 18 )
-nodes/fragment/6/position = Vector2( -240, 280 )
-nodes/fragment/7/node = SubResource( 19 )
-nodes/fragment/7/position = Vector2( 380, 120 )
-nodes/fragment/8/node = SubResource( 20 )
-nodes/fragment/8/position = Vector2( -420, 280 )
-nodes/fragment/12/node = SubResource( 5 )
-nodes/fragment/12/position = Vector2( -40, 280 )
-nodes/fragment/13/node = SubResource( 6 )
-nodes/fragment/13/position = Vector2( 1020, 380 )
-nodes/fragment/14/node = SubResource( 7 )
-nodes/fragment/14/position = Vector2( 1400, 160 )
-nodes/fragment/15/node = SubResource( 8 )
-nodes/fragment/15/position = Vector2( 1220, 460 )
-nodes/fragment/16/node = SubResource( 9 )
-nodes/fragment/16/position = Vector2( 1400, 380 )
-nodes/fragment/17/node = SubResource( 10 )
-nodes/fragment/17/position = Vector2( 1640, 200 )
-nodes/fragment/18/node = SubResource( 11 )
-nodes/fragment/18/position = Vector2( 800, 120 )
-nodes/fragment/19/node = SubResource( 12 )
-nodes/fragment/19/position = Vector2( 560, 120 )
-nodes/fragment/20/node = SubResource( 14 )
-nodes/fragment/20/position = Vector2( 160, 280 )
-nodes/fragment/connections = PoolIntArray( 2, 0, 3, 0, 3, 0, 7, 0, 5, 0, 8, 0, 8, 0, 6, 0, 6, 0, 12, 0, 4, 0, 14, 1, 13, 0, 16, 0, 14, 0, 17, 0, 16, 0, 17, 1, 15, 0, 16, 1, 17, 0, 0, 0, 18, 0, 14, 0, 18, 0, 13, 1, 7, 0, 19, 0, 12, 0, 20, 0, 20, 0, 7, 1, 19, 0, 18, 0 )
-
-[sub_resource type="ShaderMaterial" id=22]
-shader = SubResource( 21 )
-
-[sub_resource type="SphereMesh" id=23]
-radius = 8.0
-height = 16.0
-
-[sub_resource type="CircleShape2D" id=24]
+[sub_resource type="CircleShape2D" id=1]
 radius = 8.0
 
 [node name="FireBallMagic" type="Node2D"]
@@ -233,18 +14,8 @@ __meta__ = {
 "_edit_horizontal_guides_": [ -128.0 ]
 }
 
-[node name="OuterRing" type="MeshInstance2D" parent="."]
-visible = false
-material = SubResource( 3 )
-mesh = SubResource( 4 )
-
-[node name="InnerGlow" type="MeshInstance2D" parent="."]
-visible = false
-material = SubResource( 22 )
-mesh = SubResource( 23 )
-
 [node name="BurningFlame" parent="." instance=ExtResource( 3 )]
-frame = 6
+frame = 5
 
 [node name="Area2D" type="Area2D" parent="."]
 visible = false
@@ -252,7 +23,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 24 )
+shape = SubResource( 1 )
 
 [node name="LargeRays" type="Sprite" parent="."]
 material = ExtResource( 5 )
