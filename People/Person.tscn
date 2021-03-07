@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://People/Skin.tres" type="TileSet" id=1]
+[ext_resource path="res://People/Tops.tres" type="TileSet" id=2]
+[ext_resource path="res://People/Shoes.tres" type="TileSet" id=3]
+[ext_resource path="res://People/Bottoms.tres" type="TileSet" id=4]
+[ext_resource path="res://People/Eyes.tres" type="TileSet" id=5]
+[ext_resource path="res://People/Hair.tres" type="TileSet" id=6]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 3.0
+height = 6.0
+
+[node name="Person" type="KinematicBody2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ -18.0, 2.0 ],
+"_edit_vertical_guides_": [ -8.0, 8.0 ]
+}
+
+[node name="Skin" type="TileMap" parent="."]
+position = Vector2( -9, 2 )
+scale = Vector2( 0.3, 0.26 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 64, 112 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+format = 1
+tile_data = PoolIntArray( -65536, 0, 0 )
+
+[node name="Eyes" type="TileMap" parent="."]
+position = Vector2( -9, 2 )
+scale = Vector2( 0.3, 0.26 )
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 64, 112 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+format = 1
+tile_data = PoolIntArray( -65536, 0, 6 )
+
+[node name="Hair" type="TileMap" parent="."]
+position = Vector2( -9, 2 )
+scale = Vector2( 0.3, 0.26 )
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 64, 112 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+format = 1
+tile_data = PoolIntArray( -65536, 0, 8 )
+
+[node name="Tops" type="TileMap" parent="."]
+position = Vector2( -9, 2 )
+scale = Vector2( 0.3, 0.26 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 64, 112 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+format = 1
+tile_data = PoolIntArray( -65536, 1, 0 )
+
+[node name="Bottoms" type="TileMap" parent="."]
+position = Vector2( -9, 2 )
+scale = Vector2( 0.3, 0.26 )
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 64, 112 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+format = 1
+tile_data = PoolIntArray( -65536, 0, 0 )
+
+[node name="Shoes" type="TileMap" parent="."]
+position = Vector2( -9, 2 )
+scale = Vector2( 0.3, 0.26 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 64, 112 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+format = 1
+tile_data = PoolIntArray( -65536, 0, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource( 1 )
