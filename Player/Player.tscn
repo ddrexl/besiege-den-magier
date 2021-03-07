@@ -7,10 +7,11 @@
 [ext_resource path="res://Combat/Hurtbox.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Player/FireMagic.gd" type="Script" id=6]
 [ext_resource path="res://Audio/Swipe.wav" type="AudioStream" id=7]
-[ext_resource path="res://WhiteColor.shader" type="Shader" id=8]
+[ext_resource path="res://Effects/WhiteColor.shader" type="Shader" id=8]
 [ext_resource path="res://Player/WebbedBox.gd" type="Script" id=9]
 [ext_resource path="res://Player/Sword.gd" type="Script" id=10]
 [ext_resource path="res://Game/ChangeLevel.tscn" type="PackedScene" id=11]
+
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 8 )

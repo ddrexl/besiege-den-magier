@@ -1,15 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Levels/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Cave.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/Torch.tscn" type="PackedScene" id=4]
-[ext_resource path="res://WhiteColor.shader" type="Shader" id=5]
-
-[sub_resource type="ShaderMaterial" id=1]
-resource_local_to_scene = true
-shader = ExtResource( 5 )
-shader_param/active = false
 
 [node name="DarkCave" instance=ExtResource( 1 )]
 
@@ -37,13 +31,7 @@ position = Vector2( 320, 296 )
 [node name="Bat" parent="Entities" index="2" instance=ExtResource( 3 )]
 position = Vector2( 520, 248 )
 
-[node name="AnimatedSprite" parent="Entities/Bat" index="1"]
-material = SubResource( 1 )
-frame = 2
-
 [node name="CanvasModulate" type="CanvasModulate" parent="." index="6"]
 color = Color( 0.117647, 0.117647, 0.117647, 1 )
 
 [editable path="Camera2D"]
-
-[editable path="Entities/Bat"]
