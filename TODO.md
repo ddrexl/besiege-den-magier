@@ -13,8 +13,12 @@ effects
     key item pickup sound
     secret uncovered sound
     water sounds for fountain
+    healing sound
 controls
     enable buttons for tablet or browser only
+people
+    talk
+    speech
 combat
     magic cooldown
     casting ring?
@@ -24,7 +28,7 @@ debug
 tileset
     https://opengameart.org/content/lpc-16x16-tiles-extended
 
-game script
+- [o] game script
     - [✓] home
         - [✓] start
         - [✓] lern to collect coins
@@ -89,5 +93,7 @@ layout:
          fire cave - cave
            |          |
          <vines>      |
+           |          |
+         town north   |
            |          |
 garden -- town ----- path
