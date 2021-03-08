@@ -37,13 +37,21 @@ tile_data = PoolIntArray( 1179669, 8, 0 )
 [node name="Player" parent="Entities" index="0"]
 position = Vector2( 328, 320 )
 
-[node name="Torch" parent="Entities" index="1" instance=ExtResource( 4 )]
-position = Vector2( 320, 296 )
-
-[node name="Bat" parent="Entities" index="2" instance=ExtResource( 3 )]
+[node name="Bat" parent="Entities" index="1" instance=ExtResource( 3 )]
 position = Vector2( 520, 248 )
 
+[node name="Torch" parent="Entities" index="2" instance=ExtResource( 4 )]
+position = Vector2( 320, 296 )
+burning = true
+
+[node name="Torch2" parent="Entities" index="3" instance=ExtResource( 4 )]
+position = Vector2( 360, 264 )
+
+[node name="Torch3" parent="Entities" index="4" instance=ExtResource( 4 )]
+position = Vector2( 264, 344 )
+
 [node name="CanvasModulate" type="CanvasModulate" parent="." index="6"]
+visible = false
 color = Color( 0.117647, 0.117647, 0.117647, 1 )
 
 [editable path="Camera2D"]

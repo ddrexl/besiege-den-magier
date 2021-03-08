@@ -1,15 +1,38 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://World/cave.png" type="Texture" id=1]
-[ext_resource path="res://Effects/Fireball.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Effects/LuminousFlame.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/Torch.gd" type="Script" id=3]
+[ext_resource path="res://Combat/FireHurtBox.tscn" type="PackedScene" id=4]
 
-[node name="Torch" type="Node2D"]
+[sub_resource type="CircleShape2D" id=2]
+radius = 4.0
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 5.0
+height = 6.0
+
+[node name="Torch" type="StaticBody2D"]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 4 )
+shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0, 80, 16, 32 )
 
-[node name="Fireball" parent="." instance=ExtResource( 2 )]
-SPEED = 0
-lifetime = 0
+[node name="LuminousFlame" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[node name="FireHurtBox" parent="." instance=ExtResource( 4 )]
+position = Vector2( 0, -2 )
+
+[node name="CollisionShape2D" parent="FireHurtBox" index="0"]
+position = Vector2( 0, 4 )
+shape = SubResource( 3 )
+[connection signal="fire_started" from="FireHurtBox" to="." method="_on_FireHurtBox_fire_started"]
+
+[editable path="FireHurtBox"]

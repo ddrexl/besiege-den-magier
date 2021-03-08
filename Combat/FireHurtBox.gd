@@ -8,6 +8,7 @@ onready var collision_shape = $CollisionShape2D
 onready var burning_timer = $BurningTimer
 onready var damage_timer = $DamageTimer
 
+signal fire_started
 signal fire_ended
 signal deal_fire_damage
 
@@ -24,6 +25,7 @@ func start_fire():
 	collision_shape.set_deferred("disabled", true)
 	burning_timer.start()
 	damage_timer.start()
+	emit_signal("fire_started")
 	
 func end_fire():
 	collision_shape.set_deferred("disabled", false)
