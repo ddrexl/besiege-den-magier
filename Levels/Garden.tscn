@@ -18,7 +18,7 @@
 [node name="Garden" instance=ExtResource( 2 )]
 
 [node name="Camera2D" parent="." index="0"]
-position = Vector2( 360, 88 )
+position = Vector2( -8, 104 )
 
 [node name="TopLeft" parent="Camera2D/Limits" index="0"]
 position = Vector2( -64, 0 )
@@ -27,7 +27,10 @@ position = Vector2( -64, 0 )
 position = Vector2( 448, 144 )
 spawn_facing = 2
 
-[node name="House" parent="SpawnLocations" index="1" instance=ExtResource( 4 )]
+[node name="Cave" parent="SpawnLocations" index="1" instance=ExtResource( 4 )]
+position = Vector2( -8, 72 )
+
+[node name="House" parent="SpawnLocations" index="2" instance=ExtResource( 4 )]
 position = Vector2( 280, 128 )
 
 [node name="GotoTown" parent="ExitLocations" index="0" instance=ExtResource( 5 )]
@@ -39,6 +42,11 @@ player_location = "West"
 position = Vector2( 280, 96 )
 level = "res://Levels/Home.tscn"
 player_location = "Door"
+
+[node name="GotoFireWaveCave" parent="ExitLocations" index="2" instance=ExtResource( 5 )]
+position = Vector2( -8, 48 )
+level = "res://Levels/FireWaveCave.tscn"
+player_location = "South"
 
 [node name="Ground" type="TileMap" parent="Map" index="0"]
 tile_set = ExtResource( 3 )
@@ -59,7 +67,7 @@ cell_tile_origin = 1
 tile_data = PoolIntArray( 65532, 0, 131072, 65533, 0, 131073, 65534, 0, 131073, 65535, 0, 131073, 0, 0, 131073, 1, 0, 131073, 2, 0, 131073, 3, 0, 131074, 131068, 0, 4, 131069, 0, 0, 131070, 0, 131077, 131071, 0, 131077, 65536, 0, 131077, 65537, 0, 131077, 65538, 0, 1, 65539, 0, 6, 196604, 0, 65540, 196605, 0, 65542, 196606, 3, 65537, 196607, 2, 0, 131072, 3, 0, 131073, 3, 2, 131074, 0, 4, 131075, 0, 6, 262140, 0, 65540, 262141, 0, 6, 262142, 3, 65537, 196608, 3, 131073, 196609, 3, 131074, 196610, 0, 65540, 196611, 0, 6, 327676, 0, 65540, 327677, 0, 6, 262146, 0, 4, 262147, 0, 65542, 393212, 0, 4, 393213, 0, 6, 327682, 0, 131076, 327683, 0, 131078, 458748, 0, 65540, 458749, 0, 65542, 393218, 3, 0, 393219, 3, 2, 524284, 0, 131076, 524285, 0, 131078, 458754, 3, 131072, 458755, 3, 131074, 589820, 3, 0, 589821, 3, 2, 655356, 3, 131072, 655357, 3, 131074 )
 
 [node name="Player" parent="Entities" index="0"]
-position = Vector2( 360, 88 )
+position = Vector2( -8, 104 )
 
 [node name="House" parent="Entities" index="1" instance=ExtResource( 1 )]
 position = Vector2( 280, 96 )
@@ -204,19 +212,19 @@ position = Vector2( 0, 72 )
 
 [node name="Coin" parent="Entities/PersistentObjects" index="1" instance=ExtResource( 7 )]
 position = Vector2( 296, 112 )
-frame = 2
+frame = 7
 
 [node name="Coin2" parent="Entities/PersistentObjects" index="2" instance=ExtResource( 7 )]
 position = Vector2( 88, 40 )
-frame = 4
+frame = 1
 
 [node name="Coin3" parent="Entities/PersistentObjects" index="3" instance=ExtResource( 7 )]
 position = Vector2( 72, 40 )
-frame = 4
+frame = 1
 
 [node name="Coin4" parent="Entities/PersistentObjects" index="4" instance=ExtResource( 7 )]
 position = Vector2( 24, 120 )
-frame = 3
+frame = 0
 
 [node name="Pot" parent="Entities/PersistentObjects" index="5" instance=ExtResource( 11 )]
 position = Vector2( 472, 136 )

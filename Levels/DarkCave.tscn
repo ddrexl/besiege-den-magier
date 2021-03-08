@@ -27,7 +27,7 @@ position = Vector2( 640, 768 )
 position = Vector2( 384, 672 )
 spawn_facing = 0
 
-[node name="ChangeLevelPoint" parent="ExitLocations" index="0" instance=ExtResource( 7 )]
+[node name="GotoFireCave" parent="ExitLocations" index="0" instance=ExtResource( 7 )]
 position = Vector2( 384, 688 )
 level = "res://Levels/FireCave.tscn"
 player_location = "North"
@@ -183,73 +183,78 @@ max_health = 10
 
 [node name="Coin" parent="Entities/PersistentObjects" index="0" instance=ExtResource( 8 )]
 position = Vector2( 472, 552 )
+frame = 6
 
 [node name="Coin2" parent="Entities/PersistentObjects" index="1" instance=ExtResource( 8 )]
 position = Vector2( 472, 520 )
+frame = 6
 
 [node name="Coin4" parent="Entities/PersistentObjects" index="2" instance=ExtResource( 8 )]
 position = Vector2( 472, 568 )
-frame = 4
 
 [node name="Coin5" parent="Entities/PersistentObjects" index="3" instance=ExtResource( 8 )]
 position = Vector2( 168, 488 )
-frame = 3
+frame = 4
 
 [node name="Coin6" parent="Entities/PersistentObjects" index="4" instance=ExtResource( 8 )]
 position = Vector2( 184, 504 )
-frame = 2
+frame = 3
 
 [node name="Coin7" parent="Entities/PersistentObjects" index="5" instance=ExtResource( 8 )]
 position = Vector2( 200, 368 )
-frame = 2
+frame = 3
 
 [node name="Coin8" parent="Entities/PersistentObjects" index="6" instance=ExtResource( 8 )]
 position = Vector2( 136, 296 )
-frame = 2
+frame = 3
 
 [node name="Coin9" parent="Entities/PersistentObjects" index="7" instance=ExtResource( 8 )]
 position = Vector2( 152, 200 )
-frame = 2
+frame = 3
 
 [node name="Coin10" parent="Entities/PersistentObjects" index="8" instance=ExtResource( 8 )]
 position = Vector2( 208, 168 )
-frame = 2
+frame = 3
 
 [node name="Coin11" parent="Entities/PersistentObjects" index="9" instance=ExtResource( 8 )]
 position = Vector2( 296, 168 )
-frame = 1
+frame = 2
 
 [node name="Coin12" parent="Entities/PersistentObjects" index="10" instance=ExtResource( 8 )]
 position = Vector2( 296, 176 )
-frame = 0
+frame = 1
 
 [node name="Coin13" parent="Entities/PersistentObjects" index="11" instance=ExtResource( 8 )]
 position = Vector2( 296, 184 )
-frame = 0
+frame = 1
 
 [node name="Coin14" parent="Entities/PersistentObjects" index="12" instance=ExtResource( 8 )]
 position = Vector2( 296, 192 )
-frame = 7
+frame = 0
 
 [node name="Coin15" parent="Entities/PersistentObjects" index="13" instance=ExtResource( 8 )]
 position = Vector2( 296, 344 )
-frame = 7
+frame = 0
 
 [node name="Coin16" parent="Entities/PersistentObjects" index="14" instance=ExtResource( 8 )]
 position = Vector2( 576, 296 )
-frame = 6
+frame = 7
 
 [node name="Coin17" parent="Entities/PersistentObjects" index="15" instance=ExtResource( 8 )]
 position = Vector2( 448, 344 )
+frame = 6
 
 [node name="Coin18" parent="Entities/PersistentObjects" index="16" instance=ExtResource( 8 )]
 position = Vector2( 464, 344 )
+frame = 6
 
 [node name="Coin19" parent="Entities/PersistentObjects" index="17" instance=ExtResource( 8 )]
 position = Vector2( 504, 240 )
+frame = 6
 
 [node name="Coin20" parent="Entities/PersistentObjects" index="18" instance=ExtResource( 8 )]
 position = Vector2( 552, 152 )
+frame = 6
 
 [node name="Pot" parent="Entities/PersistentObjects" index="19" instance=ExtResource( 10 )]
 position = Vector2( 488, 520 )

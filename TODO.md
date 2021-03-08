@@ -1,12 +1,12 @@
 world
     forrest/tree
     old man
-    inflamable torch
     ne props
     (tower)
     (waving flag)
 enemies
     magician
+    make boss drop heart container
 effects
     hit effect sound for fire
     key item pickup sound

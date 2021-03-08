@@ -7,7 +7,7 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 8.0
 
-[sub_resource type="Shader" id=4]
+[sub_resource type="Shader" id=2]
 code = "/*
 Shader from Godot Shaders - the free shader library.
 godotshaders.com/shader/god-rays
@@ -118,7 +118,7 @@ void fragment()
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
-shader = SubResource( 4 )
+shader = SubResource( 2 )
 shader_param/angle = -0.1
 shader_param/position = -0.1
 shader_param/spread = 0.6
@@ -140,6 +140,7 @@ __meta__ = {
 }
 
 [node name="BurningFlame" parent="." instance=ExtResource( 3 )]
+frame = 6
 
 [node name="Area2D" type="Area2D" parent="."]
 visible = false
