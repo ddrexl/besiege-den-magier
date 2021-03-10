@@ -6,7 +6,9 @@ export var ACCELERATION = 300
 export var MAX_SPEED = 50
 export var FRICTION = 200
 export var KNOCKBACK = 150
-export(int) var max_health = 3
+export(int) var max_health = 2
+
+signal no_health
 
 enum {
 	IDLE,
@@ -30,9 +32,13 @@ onready var blink_animation = $BlinkAnimationPlayer
 onready var item_drop = $ItemDrop
 
 func _ready():
-	stats.set_max_health(max_health)
-	stats.set_health(max_health)
-	
+	set_max_health(max_health)
+
+func set_max_health(value):
+	max_health = value
+	stats.set_max_health(value)
+	stats.set_health(value)
+
 func _physics_process(delta):
 	knockback = slow_down(knockback, delta)
 	knockback = move_and_slide(knockback)
@@ -67,6 +73,7 @@ func slow_down(velocity_, delta):
 func _on_Stats_no_health():
 	create_death_effect()
 	item_drop.drop_item()
+	emit_signal("no_health")
 	queue_free()
 
 func _on_WanderIdleStateTransitionTimer_timeout():

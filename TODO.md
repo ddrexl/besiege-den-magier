@@ -1,12 +1,11 @@
 world
-    forrest/tree
+    forrest
     old man
     ne props
     (tower)
     (waving flag)
 enemies
     magician
-    make boss drop heart container
 effects
     hit effect sound for fire
     key item pickup sound
@@ -20,13 +19,12 @@ people
 combat
     magic cooldown
     casting ring?
-    burn effect has same strengh as fire in dark cave
 debug
     remove ui_accept to give player all abilities
 tileset
     https://opengameart.org/content/lpc-16x16-tiles-extended
 
-- [o] game script
+- [O] game script
     - [✓] home
         - [✓] start
         - [✓] lern to collect coins
@@ -55,10 +53,10 @@ tileset
             - [ ] old man tells that fire is in cave
             - [ ] old man ignites spider
             - [ ] spider drops heart container
-    - [ ] cave
-        - [ ] bat enemies
-        - [ ] bat boss
-            - [ ] drops heart container
+    - [O] cave
+        - [✓] bat enemies
+        - [o] bat boss
+            - [✓] drops heart container
             - [ ] opens path to magic cave
     - [✓] fire cave
         - [✓] fire ball magic
@@ -67,13 +65,13 @@ tileset
         - [ ] spider enemies
         - [ ] spider boss
             - [ ] drops heart container
-    - [.] dark cave
-        - [ ] bat enemies
-        - [ ] labyrinth
+    - [✓] dark cave
+        - [✓] bat enemies
+        - [✓] labyrinth
         - [✓] fire lightens path
-        - [ ] fire lights torches
-    - [ ] magic fountain
-        - [ ] full heal
+        - [✓] fire lights torches
+    - [✓] magic fountain
+        - [✓] full heal
     - [ ] boss arena
         - [ ] magician boss fight
         - [ ] spawns spiders

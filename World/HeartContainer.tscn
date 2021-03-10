@@ -33,7 +33,6 @@ radius = 6.0
 
 [node name="HeartContainer" type="AnimatedSprite"]
 frames = SubResource( 5 )
-frame = 4
 playing = true
 script = ExtResource( 1 )
 
