@@ -32,7 +32,7 @@ radius = 6.0
 
 [node name="Coin" type="AnimatedSprite"]
 frames = SubResource( 5 )
-frame = 5
+frame = 7
 playing = true
 script = ExtResource( 2 )
 

@@ -46,10 +46,10 @@ tileset
             - [ ] old man
         - [✓] healing fountain
         - [✓] vines cover shortcut to fire cave
-    - [ ] path
+    - [o] path
         - [ ] first encounter with magician
-        - [ ] fight summoned spider
-        - [ ] can't beat with sword
+        - [✓] fight summoned spider
+        - [✓] can't beat with sword
         - [ ] fight ends by event
             - [ ] old man tells that spider only die by fire
             - [ ] old man tells that fire is in cave
