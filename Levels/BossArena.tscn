@@ -41,7 +41,7 @@ position = Vector2( 312, 264 )
 [node name="PersistentObjects" parent="Entities" index="1" instance=ExtResource( 4 )]
 
 [node name="BossBat" parent="Entities/PersistentObjects" index="0" instance=ExtResource( 5 )]
-position = Vector2( 312, 192 )
+position = Vector2( 312, 208 )
 max_health = 20
 
 [editable path="Camera2D"]
