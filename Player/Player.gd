@@ -3,7 +3,7 @@ extends KinematicBody2D
 const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
 
 const ACCELERATION = 500
-const MAX_SPEED = 80
+const MAX_SPEED = 60
 const FRICTION = 500
 
 enum {
