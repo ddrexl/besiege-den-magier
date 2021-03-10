@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://World/House.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Level.tscn" type="PackedScene" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://World/Coin.tscn" type="PackedScene" id=7]
 [ext_resource path="res://World/PersistentObjects.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=10]
 [ext_resource path="res://World/Pot.tscn" type="PackedScene" id=11]
 [ext_resource path="res://World/Sword.tscn" type="PackedScene" id=12]
 [ext_resource path="res://World/Vines.tscn" type="PackedScene" id=13]
@@ -212,7 +211,6 @@ position = Vector2( 0, 72 )
 
 [node name="Coin" parent="Entities/PersistentObjects" index="1" instance=ExtResource( 7 )]
 position = Vector2( 296, 112 )
-frame = 7
 
 [node name="Coin2" parent="Entities/PersistentObjects" index="2" instance=ExtResource( 7 )]
 position = Vector2( 88, 40 )
@@ -255,13 +253,5 @@ position = Vector2( 256, 176 )
 
 [node name="Pot10" parent="Entities/PersistentObjects" index="14" instance=ExtResource( 11 )]
 position = Vector2( 56, 232 )
-
-[node name="Enemies" type="YSort" parent="Entities" index="6"]
-
-[node name="Bat" parent="Entities/Enemies" index="0" instance=ExtResource( 10 )]
-position = Vector2( 408, 48 )
-
-[node name="Bat2" parent="Entities/Enemies" index="1" instance=ExtResource( 10 )]
-position = Vector2( 432, 88 )
 
 [editable path="Camera2D"]
